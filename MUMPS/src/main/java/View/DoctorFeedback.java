@@ -9,12 +9,12 @@ package View;
  *
  * @author pipin
  */
-public class PatientHistory extends javax.swing.JFrame {
+public class DoctorFeedback extends javax.swing.JFrame {
 
     /**
-     * Creates new form PatientHistory
+     * Creates new form DoctorFeedback
      */
-    public PatientHistory() {
+    public DoctorFeedback() {
         initComponents();
     }
 
@@ -27,42 +27,20 @@ public class PatientHistory extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        tblAppts = new javax.swing.JTable();
-        lblMumpsName = new javax.swing.JLabel();
-        lblUserLoggedIn = new javax.swing.JLabel();
         btnLogOut = new javax.swing.JButton();
-        btnBack = new javax.swing.JButton();
         lblMumps = new javax.swing.JLabel();
-        lblTitle = new javax.swing.JLabel();
+        lblUserLoggedIn = new javax.swing.JLabel();
+        lblMumpsName = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        btnBack = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        lstDoctorFeedback = new javax.swing.JList<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        tblAppts.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Appointment date", "Doctor", "Notes", "Outcome"
-            }
-        ));
-        tblAppts.setEnabled(false);
-        jScrollPane1.setViewportView(tblAppts);
-
-        lblMumpsName.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        lblMumpsName.setText("My Uni Medical Practice System");
-
-        lblUserLoggedIn.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        lblUserLoggedIn.setText("Username");
 
         btnLogOut.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         btnLogOut.setText("Log Out");
         btnLogOut.setToolTipText("");
-
-        btnBack.setText("Back");
 
         lblMumps.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         lblMumps.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -70,8 +48,23 @@ public class PatientHistory extends javax.swing.JFrame {
         lblMumps.setToolTipText("");
         lblMumps.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        lblTitle.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        lblTitle.setText("My history");
+        lblUserLoggedIn.setText("Username");
+
+        lblMumpsName.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        lblMumpsName.setText("My Uni Medical Practice System");
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel1.setText("My Feedback");
+
+        btnBack.setText("Back");
+
+        lstDoctorFeedback.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        lstDoctorFeedback.setEnabled(false);
+        jScrollPane1.setViewportView(lstDoctorFeedback);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -80,44 +73,42 @@ public class PatientHistory extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane1)
-                        .addContainerGap())
-                    .addGroup(layout.createSequentialGroup()
+                    .addComponent(jScrollPane1)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(lblMumps)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lblUserLoggedIn)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnLogOut))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btnBack))
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(lblTitle)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(lblMumpsName)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
-                                .addComponent(lblUserLoggedIn)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnLogOut)
-                                .addGap(16, 16, 16))))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnBack)
+                            .addComponent(lblMumpsName)
+                            .addComponent(jLabel1))
+                        .addGap(0, 132, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblMumpsName)
-                    .addComponent(lblUserLoggedIn)
-                    .addComponent(btnLogOut)
-                    .addComponent(lblMumps))
-                .addGap(1, 1, 1)
-                .addComponent(lblTitle)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lblMumps)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblMumpsName))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btnLogOut)
+                        .addComponent(lblUserLoggedIn)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnBack)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         pack();
@@ -140,20 +131,20 @@ public class PatientHistory extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(PatientHistory.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DoctorFeedback.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(PatientHistory.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DoctorFeedback.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(PatientHistory.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DoctorFeedback.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(PatientHistory.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DoctorFeedback.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new PatientHistory().setVisible(true);
+                new DoctorFeedback().setVisible(true);
             }
         });
     }
@@ -161,11 +152,11 @@ public class PatientHistory extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnLogOut;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblMumps;
     private javax.swing.JLabel lblMumpsName;
-    private javax.swing.JLabel lblTitle;
     private javax.swing.JLabel lblUserLoggedIn;
-    private javax.swing.JTable tblAppts;
+    private javax.swing.JList<String> lstDoctorFeedback;
     // End of variables declaration//GEN-END:variables
 }

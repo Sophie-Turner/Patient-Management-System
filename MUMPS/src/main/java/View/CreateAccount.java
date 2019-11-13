@@ -39,8 +39,8 @@ public class CreateAccount extends javax.swing.JFrame {
         lblEmail = new javax.swing.JLabel();
         lblChoosePassword = new javax.swing.JLabel();
         lblConfirmPassword = new javax.swing.JLabel();
-        btnSubmitAccount = new javax.swing.JButton();
-        btnCancelAccount = new javax.swing.JButton();
+        btnSubmit = new javax.swing.JButton();
+        btnCancel = new javax.swing.JButton();
         txtForename = new javax.swing.JTextField();
         txtSurname = new javax.swing.JTextField();
         ftxtDob = new javax.swing.JFormattedTextField();
@@ -48,8 +48,8 @@ public class CreateAccount extends javax.swing.JFrame {
         txtEmail = new javax.swing.JTextField();
         txtChoosePassword = new javax.swing.JTextField();
         txtConfirmPassword = new javax.swing.JTextField();
-        btnMale = new javax.swing.JRadioButton();
-        btnFemale = new javax.swing.JRadioButton();
+        radMale = new javax.swing.JRadioButton();
+        radFemale = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -82,9 +82,9 @@ public class CreateAccount extends javax.swing.JFrame {
 
         lblConfirmPassword.setText("Confirm password");
 
-        btnSubmitAccount.setText("Submit");
+        btnSubmit.setText("Submit");
 
-        btnCancelAccount.setText("Cancel");
+        btnCancel.setText("Cancel");
 
         txtSurname.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -94,11 +94,11 @@ public class CreateAccount extends javax.swing.JFrame {
 
         ftxtDob.setText("00/00/2000");
 
-        grpGender.add(btnMale);
-        btnMale.setText("Male");
+        grpGender.add(radMale);
+        radMale.setText("Male");
 
-        grpGender.add(btnFemale);
-        btnFemale.setText("Female");
+        grpGender.add(radFemale);
+        radFemale.setText("Female");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -134,8 +134,8 @@ public class CreateAccount extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(ftxtDob, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnMale)
-                                    .addComponent(btnFemale))))
+                                    .addComponent(radMale)
+                                    .addComponent(radFemale))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -156,9 +156,9 @@ public class CreateAccount extends javax.swing.JFrame {
                                     .addGap(19, 19, 19)
                                     .addComponent(txtChoosePassword, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(btnCancelAccount)
+                                .addComponent(btnCancel)
                                 .addGap(90, 90, 90)
-                                .addComponent(btnSubmitAccount)
+                                .addComponent(btnSubmit)
                                 .addGap(39, 39, 39)))
                         .addGap(40, 40, 40))))
         );
@@ -188,7 +188,7 @@ public class CreateAccount extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lblGender)
-                            .addComponent(btnMale)))
+                            .addComponent(radMale)))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lblAddress)
@@ -209,11 +209,11 @@ public class CreateAccount extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(22, 22, 22)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnSubmitAccount)
-                            .addComponent(btnCancelAccount)))
+                            .addComponent(btnSubmit)
+                            .addComponent(btnCancel)))
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnFemale)))
+                        .addComponent(radFemale)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -260,10 +260,8 @@ public class CreateAccount extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCancelAccount;
-    private javax.swing.JRadioButton btnFemale;
-    private javax.swing.JRadioButton btnMale;
-    private javax.swing.JButton btnSubmitAccount;
+    private javax.swing.JButton btnCancel;
+    private javax.swing.JButton btnSubmit;
     private javax.swing.JFormattedTextField ftxtDob;
     private javax.swing.ButtonGroup grpGender;
     private javax.swing.JLabel lblAddress;
@@ -277,6 +275,8 @@ public class CreateAccount extends javax.swing.JFrame {
     private javax.swing.JLabel lblMumpsName;
     private javax.swing.JLabel lblSurname;
     private javax.swing.JLabel lblTitle;
+    private javax.swing.JRadioButton radFemale;
+    private javax.swing.JRadioButton radMale;
     private javax.swing.JTextField txtAddress;
     private javax.swing.JTextField txtChoosePassword;
     private javax.swing.JTextField txtConfirmPassword;

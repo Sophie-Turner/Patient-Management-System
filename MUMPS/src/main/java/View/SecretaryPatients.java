@@ -9,12 +9,12 @@ package View;
  *
  * @author pipin
  */
-public class PatientHome extends javax.swing.JFrame {
+public class SecretaryPatients extends javax.swing.JFrame {
 
     /**
-     * Creates new form PatientHome
+     * Creates new form SecretaryPatients
      */
-    public PatientHome() {
+    public SecretaryPatients() {
         initComponents();
     }
 
@@ -27,30 +27,23 @@ public class PatientHome extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jToolBar1 = new javax.swing.JToolBar();
-        btnHistory = new javax.swing.JButton();
-        btnPrescriptions = new javax.swing.JButton();
-        btnDoctors = new javax.swing.JButton();
-        lblContact = new javax.swing.JLabel();
+        lblMumpsName = new javax.swing.JLabel();
+        lblUserLoggedIn = new javax.swing.JLabel();
         btnLogOut = new javax.swing.JButton();
         lblTitle = new javax.swing.JLabel();
         lblMumps = new javax.swing.JLabel();
-        lblMumpsName = new javax.swing.JLabel();
-        lblUserLoggedIn = new javax.swing.JLabel();
-        btnCloseAccount = new javax.swing.JButton();
-        btnAppts = new javax.swing.JButton();
-
-        jToolBar1.setRollover(true);
+        jLabel1 = new javax.swing.JLabel();
+        drpPatients = new javax.swing.JComboBox<>();
+        btnCloseAcct = new javax.swing.JButton();
+        btnBack = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        btnHistory.setText("My history");
+        lblMumpsName.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        lblMumpsName.setText("My Uni Medical Practice System");
 
-        btnPrescriptions.setText("My prescriptions");
-
-        btnDoctors.setText("Doctors");
-
-        lblContact.setText("Contact us on: 01992 646123");
+        lblUserLoggedIn.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lblUserLoggedIn.setText("Username");
 
         btnLogOut.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         btnLogOut.setText("Log Out");
@@ -58,7 +51,7 @@ public class PatientHome extends javax.swing.JFrame {
 
         lblTitle.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTitle.setText("Patient home");
+        lblTitle.setText("Close a patient's account");
         lblTitle.setToolTipText("");
 
         lblMumps.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -67,15 +60,13 @@ public class PatientHome extends javax.swing.JFrame {
         lblMumps.setToolTipText("");
         lblMumps.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        lblMumpsName.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        lblMumpsName.setText("My Uni Medical Practice System");
+        jLabel1.setText("Patient");
 
-        lblUserLoggedIn.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        lblUserLoggedIn.setText("Username");
+        drpPatients.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        btnCloseAccount.setText("Terminate my account");
+        btnCloseAcct.setText("Close account");
 
-        btnAppts.setText("Appointments");
+        btnBack.setText("Back");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -84,28 +75,28 @@ public class PatientHome extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblMumpsName)
-                    .addComponent(lblTitle)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(lblContact)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(btnDoctors)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(btnCloseAccount)))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(lblMumps)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblMumpsName)
+                            .addComponent(lblTitle))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel1)
+                                .addComponent(drpPatients, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnCloseAcct)
+                            .addGap(31, 31, 31)
+                            .addComponent(btnBack))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addGap(0, 0, Short.MAX_VALUE)
+                            .addComponent(lblMumps)
+                            .addGap(100, 100, 100)
                             .addComponent(lblUserLoggedIn)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(btnLogOut))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                            .addComponent(btnAppts)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(btnHistory)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(btnPrescriptions))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(btnLogOut))))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -120,18 +111,19 @@ public class PatientHome extends javax.swing.JFrame {
                 .addComponent(lblMumpsName)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblTitle)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAppts)
-                    .addComponent(btnHistory)
-                    .addComponent(btnPrescriptions))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnDoctors)
-                    .addComponent(btnCloseAccount))
-                .addGap(18, 18, 18)
-                .addComponent(lblContact)
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnBack)
+                            .addComponent(btnCloseAcct))
+                        .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(drpPatients, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(61, Short.MAX_VALUE))))
         );
 
         pack();
@@ -154,33 +146,30 @@ public class PatientHome extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(PatientHome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SecretaryPatients.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(PatientHome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SecretaryPatients.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(PatientHome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SecretaryPatients.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(PatientHome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SecretaryPatients.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new PatientHome().setVisible(true);
+                new SecretaryPatients().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAppts;
-    private javax.swing.JButton btnCloseAccount;
-    private javax.swing.JButton btnDoctors;
-    private javax.swing.JButton btnHistory;
+    private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnCloseAcct;
     private javax.swing.JButton btnLogOut;
-    private javax.swing.JButton btnPrescriptions;
-    private javax.swing.JToolBar jToolBar1;
-    private javax.swing.JLabel lblContact;
+    private javax.swing.JComboBox<String> drpPatients;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblMumps;
     private javax.swing.JLabel lblMumpsName;
     private javax.swing.JLabel lblTitle;

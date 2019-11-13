@@ -36,14 +36,14 @@ public class PatientAppointments extends javax.swing.JFrame {
         pnlFutureAppt = new javax.swing.JPanel();
         lblPatientBookedAppt = new javax.swing.JLabel();
         lblPatientFutureAppt = new javax.swing.JLabel();
-        btnPatientCancelAppt = new javax.swing.JButton();
+        btnCancelAppt = new javax.swing.JButton();
         pnlNewAppt = new javax.swing.JPanel();
         lblPatientNewAppt = new javax.swing.JLabel();
         lblTime = new javax.swing.JLabel();
         lblDoctor = new javax.swing.JLabel();
         lblDate = new javax.swing.JLabel();
-        drpPatientBookDoctor = new javax.swing.JComboBox<>();
-        drpPatientBookTime = new javax.swing.JComboBox<>();
+        drpDoctor = new javax.swing.JComboBox<>();
+        drpTime = new javax.swing.JComboBox<>();
         btnCancel = new javax.swing.JButton();
         btnPatientBookAppt = new javax.swing.JButton();
 
@@ -76,7 +76,7 @@ public class PatientAppointments extends javax.swing.JFrame {
 
         lblPatientFutureAppt.setText("--");
 
-        btnPatientCancelAppt.setText("Cancel appointment");
+        btnCancelAppt.setText("Cancel appointment");
 
         javax.swing.GroupLayout pnlFutureApptLayout = new javax.swing.GroupLayout(pnlFutureAppt);
         pnlFutureAppt.setLayout(pnlFutureApptLayout);
@@ -85,7 +85,7 @@ public class PatientAppointments extends javax.swing.JFrame {
             .addGroup(pnlFutureApptLayout.createSequentialGroup()
                 .addGap(66, 66, 66)
                 .addGroup(pnlFutureApptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnPatientCancelAppt)
+                    .addComponent(btnCancelAppt)
                     .addComponent(lblPatientFutureAppt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(lblPatientBookedAppt))
                 .addGap(66, 66, 66))
@@ -98,7 +98,7 @@ public class PatientAppointments extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblPatientFutureAppt)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnPatientCancelAppt)
+                .addComponent(btnCancelAppt)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -112,9 +112,9 @@ public class PatientAppointments extends javax.swing.JFrame {
 
         lblDate.setText("Date");
 
-        drpPatientBookDoctor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dr. Nuts", "Dr. Nice", "Dr. Nasty", "Dr. Who" }));
+        drpDoctor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dr. Nuts", "Dr. Nice", "Dr. Nasty", "Dr. Who" }));
 
-        drpPatientBookTime.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "09:00", "09:15", "09:30", "09:45", "10:00", "10:15", "10:30", "10:45", "11:00", "11:15", "11:30", "11:45", "12:00", "12:15", "12:30", "12:45", "13:00", "13:15", "13:30", "13:45", "14:00", "14:15", "14:30", "14:45" }));
+        drpTime.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "09:00", "09:15", "09:30", "09:45", "10:00", "10:15", "10:30", "10:45", "11:00", "11:15", "11:30", "11:45", "12:00", "12:15", "12:30", "12:45", "13:00", "13:15", "13:30", "13:45", "14:00", "14:15", "14:30", "14:45" }));
 
         btnCancel.setText("Cancel");
 
@@ -133,10 +133,10 @@ public class PatientAppointments extends javax.swing.JFrame {
                         .addGap(103, 103, 103)
                         .addGroup(pnlNewApptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblTime)
-                            .addComponent(drpPatientBookTime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(drpTime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(66, 66, 66)
                         .addGroup(pnlNewApptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(drpPatientBookDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(drpDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lblDoctor))))
                 .addContainerGap(163, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlNewApptLayout.createSequentialGroup()
@@ -161,8 +161,8 @@ public class PatientAppointments extends javax.swing.JFrame {
                     .addComponent(lblDoctor))
                 .addGap(9, 9, 9)
                 .addGroup(pnlNewApptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(drpPatientBookDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(drpPatientBookTime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(drpDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(drpTime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(11, 11, 11)
                 .addComponent(btnPatientBookAppt)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -253,11 +253,11 @@ public class PatientAppointments extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCancel;
+    private javax.swing.JButton btnCancelAppt;
     private javax.swing.JButton btnLogOut;
     private javax.swing.JButton btnPatientBookAppt;
-    private javax.swing.JButton btnPatientCancelAppt;
-    private javax.swing.JComboBox<String> drpPatientBookDoctor;
-    private javax.swing.JComboBox<String> drpPatientBookTime;
+    private javax.swing.JComboBox<String> drpDoctor;
+    private javax.swing.JComboBox<String> drpTime;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblDate;
     private javax.swing.JLabel lblDoctor;
