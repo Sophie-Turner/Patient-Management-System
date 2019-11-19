@@ -5,6 +5,8 @@
  */
 package View;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author pipin
@@ -60,6 +62,11 @@ public class PatientAppointments extends javax.swing.JFrame {
         btnLogOut.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         btnLogOut.setText("Log Out");
         btnLogOut.setToolTipText("");
+        btnLogOut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLogOutActionPerformed(evt);
+            }
+        });
 
         lblMumps.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         lblMumps.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -77,6 +84,11 @@ public class PatientAppointments extends javax.swing.JFrame {
         lblPatientFutureAppt.setText("--");
 
         btnCancelAppt.setText("Cancel appointment");
+        btnCancelAppt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelApptActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout pnlFutureApptLayout = new javax.swing.GroupLayout(pnlFutureAppt);
         pnlFutureAppt.setLayout(pnlFutureApptLayout);
@@ -116,9 +128,19 @@ public class PatientAppointments extends javax.swing.JFrame {
 
         drpTime.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "09:00", "09:15", "09:30", "09:45", "10:00", "10:15", "10:30", "10:45", "11:00", "11:15", "11:30", "11:45", "12:00", "12:15", "12:30", "12:45", "13:00", "13:15", "13:30", "13:45", "14:00", "14:15", "14:30", "14:45" }));
 
-        btnCancel.setText("Cancel");
+        btnCancel.setText("Back");
+        btnCancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelActionPerformed(evt);
+            }
+        });
 
         btnPatientBookAppt.setText("Book appointment");
+        btnPatientBookAppt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPatientBookApptActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout pnlNewApptLayout = new javax.swing.GroupLayout(pnlNewAppt);
         pnlNewAppt.setLayout(pnlNewApptLayout);
@@ -215,6 +237,26 @@ public class PatientAppointments extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnLogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogOutActionPerformed
+        Login login = new Login();
+        login.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnLogOutActionPerformed
+
+    private void btnCancelApptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelApptActionPerformed
+        JOptionPane.showMessageDialog(null, "Your appointment will be cancelled shortly.");
+    }//GEN-LAST:event_btnCancelApptActionPerformed
+
+    private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
+        PatientHome home = new PatientHome();
+        home.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnCancelActionPerformed
+
+    private void btnPatientBookApptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPatientBookApptActionPerformed
+        JOptionPane.showMessageDialog(null, "Your appointment will be booked shortly.");
+    }//GEN-LAST:event_btnPatientBookApptActionPerformed
 
     /**
      * @param args the command line arguments

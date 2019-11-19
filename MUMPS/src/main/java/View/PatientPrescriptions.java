@@ -75,6 +75,11 @@ public class PatientPrescriptions extends javax.swing.JFrame {
         btnLogOut.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         btnLogOut.setText("Log Out");
         btnLogOut.setToolTipText("");
+        btnLogOut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLogOutActionPerformed(evt);
+            }
+        });
 
         lblLaw.setText("Prescriptions are valid for 6 months from their issue date, according to UK law.");
 
@@ -82,6 +87,11 @@ public class PatientPrescriptions extends javax.swing.JFrame {
         lblTitle.setText("My prescriptions");
 
         btnBack.setText("Back");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBackActionPerformed(evt);
+            }
+        });
 
         tblPrescriptions.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -147,6 +157,18 @@ public class PatientPrescriptions extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnLogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogOutActionPerformed
+        Login login = new Login();
+        login.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnLogOutActionPerformed
+
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+        PatientHome home = new PatientHome();
+        home.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnBackActionPerformed
 
     /**
      * @param args the command line arguments

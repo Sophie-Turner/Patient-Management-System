@@ -9,6 +9,10 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBoxLayout"/>
     </Container>
+    <Component class="javax.swing.JOptionPane" name="jOptionPane1">
+    </Component>
+    <Component class="javax.swing.JOptionPane" name="jOptionPane2">
+    </Component>
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
@@ -104,16 +108,25 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="My history"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnHistoryActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnPrescriptions">
       <Properties>
         <Property name="text" type="java.lang.String" value="My prescriptions"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPrescriptionsActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnDoctors">
       <Properties>
         <Property name="text" type="java.lang.String" value="Doctors"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDoctorsActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblContact">
       <Properties>
@@ -128,6 +141,9 @@
         <Property name="text" type="java.lang.String" value="Log Out"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLogOutActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblTitle">
       <Properties>
@@ -170,11 +186,17 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Terminate my account"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCloseAccountActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnAppts">
       <Properties>
         <Property name="text" type="java.lang.String" value="Appointments"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnApptsActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

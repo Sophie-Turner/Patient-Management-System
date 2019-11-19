@@ -46,10 +46,20 @@ public class DoctorHome extends javax.swing.JFrame {
         lblUserLoggedIn.setText("Username");
 
         btnAppts.setText("Appointments");
+        btnAppts.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnApptsActionPerformed(evt);
+            }
+        });
 
         btnLogOut.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         btnLogOut.setText("Log Out");
         btnLogOut.setToolTipText("");
+        btnLogOut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLogOutActionPerformed(evt);
+            }
+        });
 
         lblTitle.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -63,10 +73,25 @@ public class DoctorHome extends javax.swing.JFrame {
         lblMumps.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         btnPatients.setText("Patients");
+        btnPatients.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPatientsActionPerformed(evt);
+            }
+        });
 
         btnFeedback.setText("My feedback");
+        btnFeedback.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFeedbackActionPerformed(evt);
+            }
+        });
 
         btnMedicines.setText("Medicines");
+        btnMedicines.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMedicinesActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -123,6 +148,36 @@ public class DoctorHome extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnLogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogOutActionPerformed
+        Login login = new Login();
+        login.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnLogOutActionPerformed
+
+    private void btnApptsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnApptsActionPerformed
+        StaffAppointments appts = new StaffAppointments();
+        appts.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnApptsActionPerformed
+
+    private void btnPatientsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPatientsActionPerformed
+        DoctorPatients patientsList = new DoctorPatients();
+        patientsList.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnPatientsActionPerformed
+
+    private void btnFeedbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFeedbackActionPerformed
+        DoctorFeedback feedback = new DoctorFeedback();
+        feedback.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnFeedbackActionPerformed
+
+    private void btnMedicinesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMedicinesActionPerformed
+        StaffMedicines meds = new StaffMedicines();
+        meds.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnMedicinesActionPerformed
 
     /**
      * @param args the command line arguments

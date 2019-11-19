@@ -5,6 +5,8 @@
  */
 package View;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author pipin
@@ -28,6 +30,8 @@ public class PatientHome extends javax.swing.JFrame {
     private void initComponents() {
 
         jToolBar1 = new javax.swing.JToolBar();
+        jOptionPane1 = new javax.swing.JOptionPane();
+        jOptionPane2 = new javax.swing.JOptionPane();
         btnHistory = new javax.swing.JButton();
         btnPrescriptions = new javax.swing.JButton();
         btnDoctors = new javax.swing.JButton();
@@ -45,16 +49,36 @@ public class PatientHome extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         btnHistory.setText("My history");
+        btnHistory.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHistoryActionPerformed(evt);
+            }
+        });
 
         btnPrescriptions.setText("My prescriptions");
+        btnPrescriptions.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPrescriptionsActionPerformed(evt);
+            }
+        });
 
         btnDoctors.setText("Doctors");
+        btnDoctors.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDoctorsActionPerformed(evt);
+            }
+        });
 
         lblContact.setText("Contact us on: 01992 646123");
 
         btnLogOut.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         btnLogOut.setText("Log Out");
         btnLogOut.setToolTipText("");
+        btnLogOut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLogOutActionPerformed(evt);
+            }
+        });
 
         lblTitle.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -74,8 +98,18 @@ public class PatientHome extends javax.swing.JFrame {
         lblUserLoggedIn.setText("Username");
 
         btnCloseAccount.setText("Terminate my account");
+        btnCloseAccount.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCloseAccountActionPerformed(evt);
+            }
+        });
 
         btnAppts.setText("Appointments");
+        btnAppts.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnApptsActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -137,6 +171,40 @@ public class PatientHome extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnLogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogOutActionPerformed
+        Login login = new Login();
+        login.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnLogOutActionPerformed
+
+    private void btnApptsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnApptsActionPerformed
+        PatientAppointments appts = new PatientAppointments();
+        appts.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnApptsActionPerformed
+
+    private void btnHistoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHistoryActionPerformed
+        PatientHistory history = new PatientHistory();
+        history.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnHistoryActionPerformed
+
+    private void btnPrescriptionsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPrescriptionsActionPerformed
+        PatientPrescriptions meds = new PatientPrescriptions();
+        meds.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnPrescriptionsActionPerformed
+
+    private void btnDoctorsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDoctorsActionPerformed
+        FeedbackDoctors doctors = new FeedbackDoctors();
+        doctors.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnDoctorsActionPerformed
+
+    private void btnCloseAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCloseAccountActionPerformed
+        JOptionPane.showMessageDialog(null, "Your account will be closed shortly.");
+    }//GEN-LAST:event_btnCloseAccountActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -179,6 +247,8 @@ public class PatientHome extends javax.swing.JFrame {
     private javax.swing.JButton btnHistory;
     private javax.swing.JButton btnLogOut;
     private javax.swing.JButton btnPrescriptions;
+    private javax.swing.JOptionPane jOptionPane1;
+    private javax.swing.JOptionPane jOptionPane2;
     private javax.swing.JToolBar jToolBar1;
     private javax.swing.JLabel lblContact;
     private javax.swing.JLabel lblMumps;
