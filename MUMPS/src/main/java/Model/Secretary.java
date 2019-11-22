@@ -4,12 +4,11 @@
  * and open the template in the editor.
  */
 package Model;
-
 /**
  *
  * @author pipin
  */
-public class Secretary extends User{
+public class Secretary extends User implements IStaffAppointments, IStaffMedicines{
     
     public Secretary(String forename, String surname, String address, String userId){
     this.forename = forename;
@@ -24,4 +23,5 @@ public class Secretary extends User{
    
    public void approveAppointment(){}
     
+   Secretary testSecretary = new Secretary("Gupinda", "Guppy", "20 Chandra Place, Kirbyton", "S001");
 }

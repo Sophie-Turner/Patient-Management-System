@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package View;
-
+import Model.Administrator;
 import javax.swing.JOptionPane;
 
 /**
@@ -12,14 +12,13 @@ import javax.swing.JOptionPane;
  * @author pipin
  */
 public class AdminHome extends javax.swing.JFrame {
-
+    private Administrator currentAdministrator;
     /**
      * Creates new form AdminHome
      */
     public AdminHome() {
         initComponents();
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -242,7 +241,7 @@ public class AdminHome extends javax.swing.JFrame {
     }//GEN-LAST:event_btnViewDoctorsActionPerformed
 
     private void btnConfirmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfirmActionPerformed
-        JOptionPane.showMessageDialog(null, "The new account has been created.");
+        JOptionPane.showMessageDialog(this, "The new account has been created.");
         txtForename.setText("");
         txtSurname.setText("");
         txtAddress.setText("");

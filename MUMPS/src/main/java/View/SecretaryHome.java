@@ -4,13 +4,13 @@
  * and open the template in the editor.
  */
 package View;
-
+import Model.Secretary;
 /**
  *
  * @author pipin
  */
 public class SecretaryHome extends javax.swing.JFrame {
-
+    private Secretary currentSecretary;
     /**
      * Creates new form SecretaryHome
      */

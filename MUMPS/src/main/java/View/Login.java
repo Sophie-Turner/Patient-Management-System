@@ -4,13 +4,13 @@
  * and open the template in the editor.
  */
 package View;
-
+import Model.User;
 /**
  *
  * @author pipin
  */
 public class Login extends javax.swing.JFrame {
-
+    private User currentUser;
     /**
      * Creates new form Login
      */
@@ -156,11 +156,10 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCreateAccountActionPerformed
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-        logIn();
+        String usernameTyped = txtUsername.getText();
+        String passwordTyped = pwdPassword.getText();
     }//GEN-LAST:event_btnLoginActionPerformed
-
-    public void logIn(){}
-    
+  
     /**
      * @param args the command line arguments
      */

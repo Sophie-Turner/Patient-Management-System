@@ -5,12 +5,14 @@
  */
 package View;
 
+import Model.Patient;
+
 /**
  *
  * @author pipin
  */
 public class PatientPrescriptions extends javax.swing.JFrame {
-
+    private Patient currentPatient;
     /**
      * Creates new form PatientPrescriptions
      */

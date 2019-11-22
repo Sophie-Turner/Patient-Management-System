@@ -4,12 +4,11 @@
  * and open the template in the editor.
  */
 package Model;
-
 /**
  *
  * @author pipin
  */
-public class Doctor extends User{
+public class Doctor extends User implements IStaffAppointments, IStaffMedicines{
  
 public Doctor(String forename, String surname, String address, String userId){
     this.forename = forename;
@@ -18,8 +17,12 @@ public Doctor(String forename, String surname, String address, String userId){
     this.userId = userId;
    }     
     
-public void makeNotes(){}
+public void makeNotes(){
+
+}
 
 public void createMedicine(){}
+
+Doctor testDoctor = new Doctor("Bogus", "Crevey", "17 Casandra Street, Fropping", "D001");
 
 }

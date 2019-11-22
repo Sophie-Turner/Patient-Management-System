@@ -4,13 +4,13 @@
  * and open the template in the editor.
  */
 package View;
-
+import Model.Doctor;
 /**
  *
  * @author pipin
  */
 public class DoctorFeedback extends javax.swing.JFrame {
-
+    private Doctor currentDoctor;
     /**
      * Creates new form DoctorFeedback
      */

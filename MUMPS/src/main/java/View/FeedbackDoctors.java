@@ -6,13 +6,15 @@
 package View;
 
 import javax.swing.JOptionPane;
-
+import Model.Patient;
+import Model.Administrator;
 /**
  *
  * @author pipin
  */
 public class FeedbackDoctors extends javax.swing.JFrame {
-
+    private Patient currentPatient;
+    private Administrator currentAdministrator;
     /**
      * Creates new form PatientDoctors
      */
@@ -221,7 +223,7 @@ public class FeedbackDoctors extends javax.swing.JFrame {
 
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
         if (txtFeedback != null){
-            JOptionPane.showMessageDialog(null, "Thank you for your feedback. It has been sent to the doctor.");
+            JOptionPane.showMessageDialog(this, "Thank you for your feedback. It has been sent to the doctor.");
             txtFeedback.setText("");
         }
     }//GEN-LAST:event_btnSubmitActionPerformed

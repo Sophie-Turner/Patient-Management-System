@@ -4,12 +4,11 @@
  * and open the template in the editor.
  */
 package Model;
-
 /**
  *
  * @author pipin
  */
-public class Administrator extends User {
+public class Administrator extends User implements IDoctorViewer {
     
    public Administrator(String forename, String surname, String address, String userId){
     this.forename = forename;
@@ -34,4 +33,5 @@ public class Administrator extends User {
    
    public void removeUser(){}
    
+   Administrator testAdmin = new Administrator("Angus", "Bovey", "12 Castle Drive, Ebrington", "A001");
 }

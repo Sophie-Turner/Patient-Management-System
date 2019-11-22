@@ -5,12 +5,15 @@
  */
 package View;
 
+import Model.Secretary;
+import Model.Doctor;
 /**
  *
  * @author pipin
  */
 public class StaffAppointments extends javax.swing.JFrame {
-
+    private Secretary currentSecretary;
+    private Doctor currentDoctor;
     /**
      * Creates new form DoctorAppointmentsList
      */

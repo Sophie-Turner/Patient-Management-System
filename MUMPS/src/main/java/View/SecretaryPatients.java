@@ -5,6 +5,7 @@
  */
 package View;
 
+import Model.Secretary;
 import javax.swing.JOptionPane;
 
 /**
@@ -12,7 +13,7 @@ import javax.swing.JOptionPane;
  * @author pipin
  */
 public class SecretaryPatients extends javax.swing.JFrame {
-
+    private Secretary currentSecretary;
     /**
      * Creates new form SecretaryPatients
      */

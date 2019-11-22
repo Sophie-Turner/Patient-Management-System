@@ -6,13 +6,13 @@
 package View;
 
 import javax.swing.JOptionPane;
-
+import Model.Patient;
 /**
  *
  * @author pipin
  */
 public class PatientAppointments extends javax.swing.JFrame {
-
+    private Patient currentPatient;
     /**
      * Creates new form PatientAppointments
      */
@@ -245,7 +245,7 @@ public class PatientAppointments extends javax.swing.JFrame {
     }//GEN-LAST:event_btnLogOutActionPerformed
 
     private void btnCancelApptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelApptActionPerformed
-        JOptionPane.showMessageDialog(null, "Your appointment will be cancelled shortly.");
+        JOptionPane.showMessageDialog(this, "Your appointment will be cancelled shortly.");
     }//GEN-LAST:event_btnCancelApptActionPerformed
 
     private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
@@ -255,7 +255,7 @@ public class PatientAppointments extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCancelActionPerformed
 
     private void btnPatientBookApptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPatientBookApptActionPerformed
-        JOptionPane.showMessageDialog(null, "Your appointment will be booked shortly.");
+        JOptionPane.showMessageDialog(this, "Your appointment will be booked shortly.");
     }//GEN-LAST:event_btnPatientBookApptActionPerformed
 
     /**

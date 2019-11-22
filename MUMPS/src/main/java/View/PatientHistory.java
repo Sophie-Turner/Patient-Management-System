@@ -5,12 +5,14 @@
  */
 package View;
 
+import Model.Patient;
+
 /**
  *
  * @author pipin
  */
 public class PatientHistory extends javax.swing.JFrame {
-
+    private Patient currentPatient;
     /**
      * Creates new form PatientHistory
      */
@@ -63,6 +65,11 @@ public class PatientHistory extends javax.swing.JFrame {
         btnLogOut.setToolTipText("");
 
         btnBack.setText("Back");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBackActionPerformed(evt);
+            }
+        });
 
         lblMumps.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         lblMumps.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -122,6 +129,12 @@ public class PatientHistory extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+        PatientHome home = new PatientHome();
+        home.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnBackActionPerformed
 
     /**
      * @param args the command line arguments

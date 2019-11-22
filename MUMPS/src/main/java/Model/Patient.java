@@ -4,12 +4,11 @@
  * and open the template in the editor.
  */
 package Model;
-
 /**
  *
  * @author pipin
  */
-public class Patient extends User {
+public class Patient extends User implements IDoctorViewer {
     
     private int age;
     private String gender;
@@ -39,5 +38,5 @@ public class Patient extends User {
     
     public void closeAccount(){}
     
-    
+    Patient testPatient = new Patient("Guss", "Creasy", "27 Poldra Road, Freminton", "P001", 30, "Male");
 }

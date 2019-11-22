@@ -5,6 +5,7 @@
  */
 package View;
 
+import Model.Patient;
 import javax.swing.JOptionPane;
 
 /**
@@ -12,7 +13,7 @@ import javax.swing.JOptionPane;
  * @author pipin
  */
 public class PatientHome extends javax.swing.JFrame {
-
+    private Patient currentPatient;
     /**
      * Creates new form PatientHome
      */

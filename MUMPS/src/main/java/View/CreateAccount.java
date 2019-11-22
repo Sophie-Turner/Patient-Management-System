@@ -6,13 +6,13 @@
 package View;
 
 import javax.swing.JOptionPane;
-
+import Model.User; //Maybe this should be patient, not user.
 /**
  *
  * @author pipin
  */
 public class CreateAccount extends javax.swing.JFrame {
-
+    private User currentUser; //Maybe this should be patient, not user.
     /**
      * Creates new form CreateAccount
      */
@@ -237,7 +237,7 @@ public class CreateAccount extends javax.swing.JFrame {
     }//GEN-LAST:event_txtSurnameActionPerformed
 
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
-        JOptionPane.showMessageDialog(null, "Your request will be processed shortly.");
+        JOptionPane.showMessageDialog(this, "Your request will be processed shortly.");
         backToLogin();     
     }//GEN-LAST:event_btnSubmitActionPerformed
 
