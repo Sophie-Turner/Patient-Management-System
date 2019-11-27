@@ -3,15 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Strategies;
+package Controller;
 
 /**
  *
  * @author pipin
  */
-public class LoginAsAdminStrategy implements ILoginStrategy {
-    @Override
-    public void Login(){
+public class AdminController {
     
-    }
 }

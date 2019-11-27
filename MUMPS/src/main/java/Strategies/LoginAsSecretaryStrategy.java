@@ -1,14 +1,23 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package Strategies;
 
+package Strategies;
+import View.SecretaryHome;
+import Model.Secretary;
+import Controller.SecretaryController;
 /**
  *
  * @author pipin
  */
 public class LoginAsSecretaryStrategy implements ILoginStrategy {
     
+    @Override
+    public void Login(){
+    //Should I create an instance of a secretary here?
+    //This method should send the user to the secretary home.
+    SecretaryHome view = new SecretaryHome();
+    Secretary model = new Secretary("","","","");
+    SecretaryController controller = new SecretaryController();
+    controller.setHomeView(view);
+    controller.setModel(model);
+    view.setVisible(true);
+    }
 }

@@ -10,5 +10,8 @@ package Strategies;
  * @author pipin
  */
 public class LoginAsDoctorStrategy implements ILoginStrategy {
+    @Override
+    public void Login(){
     
+    }
 }

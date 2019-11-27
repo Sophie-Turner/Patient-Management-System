@@ -10,5 +10,5 @@ package Strategies;
  * @author pipin
  */
 public interface ILoginStrategy {
-    
+    public void Login();
 }
