@@ -8,7 +8,7 @@ package Model;
  *
  * @author pipin
  */
-public class Patient extends User implements IDoctorViewer {
+public class Patient extends User {
     
     private int age;
     private String gender;
@@ -29,7 +29,7 @@ public class Patient extends User implements IDoctorViewer {
     public String getGender() {
         return gender;
     }
-    
+
     public void createAccount(){}
     
     public void rateDoctor(){}

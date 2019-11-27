@@ -5,6 +5,7 @@
  */
 package View;
 import Model.User;
+import java.awt.event.ActionListener;
 /**
  *
  * @author pipin
@@ -17,7 +18,9 @@ public class Login extends javax.swing.JFrame {
     public Login() {
         initComponents();
     }
-
+    public void addButtonHandlerStrategy(ActionListener strategy){
+        btnLogin.addActionListener(strategy);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -156,10 +159,17 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCreateAccountActionPerformed
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-        String usernameTyped = txtUsername.getText();
-        String passwordTyped = pwdPassword.getText();
+        
     }//GEN-LAST:event_btnLoginActionPerformed
-  
+    //Return the user input to the controller
+    public String getUsername(){
+        String usernameTyped = txtUsername.getText();
+        return usernameTyped;
+    }
+    public String getPassword(){
+        String passwordTyped = pwdPassword.getText();
+        return passwordTyped;
+    }
     /**
      * @param args the command line arguments
      */

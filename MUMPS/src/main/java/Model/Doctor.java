@@ -8,7 +8,7 @@ package Model;
  *
  * @author pipin
  */
-public class Doctor extends User implements IStaffAppointments, IStaffMedicines{
+public class Doctor extends User {
  
 public Doctor(String forename, String surname, String address, String userId){
     this.forename = forename;

@@ -8,7 +8,7 @@ package Model;
  *
  * @author pipin
  */
-public class Administrator extends User implements IDoctorViewer {
+public class Administrator extends User {
     
    public Administrator(String forename, String surname, String address, String userId){
     this.forename = forename;

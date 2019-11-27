@@ -8,7 +8,7 @@ package Model;
  *
  * @author pipin
  */
-public class Secretary extends User implements IStaffAppointments, IStaffMedicines{
+public class Secretary extends User {
     
     public Secretary(String forename, String surname, String address, String userId){
     this.forename = forename;

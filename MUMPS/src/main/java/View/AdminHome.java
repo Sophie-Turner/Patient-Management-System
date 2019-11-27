@@ -236,10 +236,10 @@ public class AdminHome extends javax.swing.JFrame {
     private void btnViewDoctorsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewDoctorsActionPerformed
     FeedbackDoctors feedback = new FeedbackDoctors();
     feedback.setVisible(true);
-    dispose();
-        // TODO add your handling code here:
+    dispose();   
     }//GEN-LAST:event_btnViewDoctorsActionPerformed
 
+    
     private void btnConfirmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfirmActionPerformed
         JOptionPane.showMessageDialog(this, "The new account has been created.");
         txtForename.setText("");
