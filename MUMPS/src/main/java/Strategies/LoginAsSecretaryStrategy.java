@@ -10,7 +10,7 @@ import Controller.SecretaryController;
 public class LoginAsSecretaryStrategy implements ILoginStrategy {
     
     @Override
-    public void Login(){
+    public void completeLogin(){
     //Should I create an instance of a secretary here? Yes.
     //This method should send the user to the secretary home.
     SecretaryHome view = new SecretaryHome();

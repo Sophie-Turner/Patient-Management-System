@@ -55,7 +55,7 @@ public class User {
                loginStrategy = new Strategies.LoginAsDoctorStrategy();
                break;
             case 'S': //Lowercase too!
-                System.out.println("The user model worked!");
+                System.out.println("The user model worked!"); //Testing
                loginStrategy = new Strategies.LoginAsSecretaryStrategy();
                break;    
             default: //Message box or something for if they input an invalid username
@@ -63,8 +63,8 @@ public class User {
         }        
         return loginStrategy;
     }
-     public void completeLogin() {
-         this.loginStrategy.Login();
+     public void completeLogin(String userId, String password) {
+         this.setStrategy(selectStrategy(userId, password));
     }
     
 }

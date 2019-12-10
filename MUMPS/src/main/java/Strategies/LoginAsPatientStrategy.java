@@ -11,7 +11,7 @@ package Strategies;
  */
 public class LoginAsPatientStrategy implements ILoginStrategy {
    @Override
-    public void Login(){
+    public void completeLogin(){
     
     } 
 }
