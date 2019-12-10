@@ -23,5 +23,5 @@ public class Secretary extends User {
    
    public void approveAppointment(){}
     
-   Secretary testSecretary = new Secretary("Gupinda", "Guppy", "20 Chandra Place, Kirbyton", "S001");
+   //Secretary testSecretary = new Secretary("Gupinda", "Guppy", "20 Chandra Place, Kirbyton", "S001");
 }

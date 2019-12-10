@@ -19,8 +19,9 @@ public class SecretaryController {
     private Login loginView = null;
     
     public void setHomeView(SecretaryHome homeView){
+        System.out.println("setHomeView method in SecretaryController was called.");
         this.homeView = homeView;
-        this.loginView.dispose();
+       // this.loginView.dispose();
     }
     
     public void setPatientsView(SecretaryPatients patientsView){
@@ -28,6 +29,7 @@ public class SecretaryController {
     }
     
     public void setModel(Secretary model){
+        System.out.println("setModel method in SecretaryController was called.");
         this.model = model;
     }
 }

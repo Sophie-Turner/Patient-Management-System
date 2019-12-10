@@ -38,6 +38,7 @@ public class User {
     }
     
     public void setStrategy(ILoginStrategy loginStrategy){
+        System.out.println("setStrategy method was called inside User model.");
         this.loginStrategy = loginStrategy;
     }
     
@@ -55,7 +56,7 @@ public class User {
                loginStrategy = new Strategies.LoginAsDoctorStrategy();
                break;
             case 'S': //Lowercase too!
-                System.out.println("The user model worked!"); //Testing
+                System.out.println("SelectStrategy method in user model recognises username."); //Testing
                loginStrategy = new Strategies.LoginAsSecretaryStrategy();
                break;    
             default: //Message box or something for if they input an invalid username
@@ -64,7 +65,9 @@ public class User {
         return loginStrategy;
     }
      public void completeLogin(String userId, String password) {
+         System.out.println("CompleteLogin method was called inside User model. Next should be SelectStrategy.");
          this.setStrategy(selectStrategy(userId, password));
+         this.loginStrategy.completeLogin();
     }
     
 }

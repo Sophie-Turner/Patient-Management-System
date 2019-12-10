@@ -13,12 +13,12 @@ public class LoginAsSecretaryStrategy implements ILoginStrategy {
     public void completeLogin(){
     //Should I create an instance of a secretary here? Yes.
     //This method should send the user to the secretary home.
-    SecretaryHome view = new SecretaryHome();
-    Secretary model = new Secretary("","","","");
-    SecretaryController controller = new SecretaryController();
-    controller.setHomeView(view);
-    controller.setModel(model);
-    view.setVisible(true);
-        System.out.println("The secretary Login strategy worked.");
+      System.out.println("CompleteLogin method in LoginAsSecretaryStrategy was called.");
+      SecretaryHome view = new SecretaryHome();
+      Secretary model = new Secretary("","","","");
+      SecretaryController controller = new SecretaryController();
+      controller.setHomeView(view);
+      controller.setModel(model);
+      view.setVisible(true);     
     }
 }

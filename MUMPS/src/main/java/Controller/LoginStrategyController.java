@@ -25,10 +25,10 @@ public class LoginStrategyController implements ActionListener{
     
     @Override //when the user clicks the login button.
     public void actionPerformed(ActionEvent clickLogin){
-        
+        System.out.println("Click registered in the login strategy controller.");
         String userId = view.getUsername();
         String password = view.getPassword();
         model.completeLogin(userId, password);
-        System.out.println("Login strategy controller worked.");
+       
     }
 }
