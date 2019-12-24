@@ -37,26 +37,29 @@ public class User {
         this.loginStrategy = null;
     }
     
-    public void setStrategy(ILoginStrategy loginStrategy){
-        System.out.println("setStrategy method was called inside User model.");
+    public void SetStrategy(ILoginStrategy loginStrategy){
+        System.out.println("SetStrategy method was called inside User model.");
         this.loginStrategy = loginStrategy;
     }
     
-   public static ILoginStrategy selectStrategy(String userId, String password){
+   public static ILoginStrategy SelectStrategy(String userId, String password){
         ILoginStrategy loginStrategy;
         loginStrategy = null;
         switch (userId.charAt(0)) {
             case 'P':
+                System.out.println("SelectStrategy method in user model recognises username."); //Testing
                loginStrategy = new Strategies.LoginAsPatientStrategy();
                break;
             case 'A':
+                System.out.println("SelectStrategy method in user model recognises username."); //Testing
                loginStrategy = new Strategies.LoginAsAdminStrategy();
                break;
             case 'D':
+                System.out.println("SelectStrategy method in user model recognises username."); //Testing
                loginStrategy = new Strategies.LoginAsDoctorStrategy();
                break;
             case 'S': //Lowercase too!
-                System.out.println("SelectStrategy method in user model recognises username."); //Testing
+               System.out.println("SelectStrategy method in user model recognises username."); //Testing
                loginStrategy = new Strategies.LoginAsSecretaryStrategy();
                break;    
             default: //Message box or something for if they input an invalid username
@@ -66,7 +69,7 @@ public class User {
     }
      public void completeLogin(String userId, String password) {
          System.out.println("CompleteLogin method was called inside User model. Next should be SelectStrategy.");
-         this.setStrategy(selectStrategy(userId, password));
+         this.SetStrategy(SelectStrategy(userId, password));
          this.loginStrategy.completeLogin();
     }
     

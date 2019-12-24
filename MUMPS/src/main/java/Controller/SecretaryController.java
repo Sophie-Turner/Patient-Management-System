@@ -16,12 +16,10 @@ public class SecretaryController {
     private SecretaryHome homeView = null;
     private SecretaryPatients patientsView = null;
     private Secretary model = null;
-    private Login loginView = null;
     
     public void setHomeView(SecretaryHome homeView){
         System.out.println("setHomeView method in SecretaryController was called.");
-        this.homeView = homeView;
-       // this.loginView.dispose();
+        this.homeView = homeView; 
     }
     
     public void setPatientsView(SecretaryPatients patientsView){

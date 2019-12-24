@@ -23,6 +23,6 @@ public void makeNotes(){
 
 public void createMedicine(){}
 
-Doctor testDoctor = new Doctor("Bogus", "Crevey", "17 Casandra Street, Fropping", "D001");
+//Doctor testDoctor = new Doctor("Bogus", "Crevey", "17 Casandra Street, Fropping", "D001");
 
 }

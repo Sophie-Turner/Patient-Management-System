@@ -28,6 +28,7 @@ public class LoginStrategyController implements ActionListener{
         System.out.println("Click registered in the login strategy controller.");
         String userId = view.getUsername();
         String password = view.getPassword();
+        view.clearAll();
         model.completeLogin(userId, password);
        
     }

@@ -33,5 +33,5 @@ public class Administrator extends User {
    
    public void removeUser(){}
    
-   Administrator testAdmin = new Administrator("Angus", "Bovey", "12 Castle Drive, Ebrington", "A001");
+   //Administrator testAdmin = new Administrator("Angus", "Bovey", "12 Castle Drive, Ebrington", "A001");
 }

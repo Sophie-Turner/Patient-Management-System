@@ -170,6 +170,10 @@ public class Login extends javax.swing.JFrame {
         String passwordTyped = pwdPassword.getText();
         return passwordTyped;
     }
+    public void clearAll(){
+        txtUsername.setText("");
+        pwdPassword.setText("");
+    }
     /**
      * @param args the command line arguments
      */

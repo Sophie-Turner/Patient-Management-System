@@ -38,5 +38,5 @@ public class Patient extends User {
     
     public void closeAccount(){}
     
-    Patient testPatient = new Patient("Guss", "Creasy", "27 Poldra Road, Freminton", "P001", 30, "Male");
+    //Patient testPatient = new Patient("Guss", "Creasy", "27 Poldra Road, Freminton", "P001", 30, "Male");
 }
