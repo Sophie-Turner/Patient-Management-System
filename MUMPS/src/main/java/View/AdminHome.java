@@ -228,15 +228,13 @@ public class AdminHome extends javax.swing.JFrame {
 
     private void btnLogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogOutActionPerformed
         // TODO add your handling code here:
-        Login login = new Login();
-        login.setVisible(true);
+
         dispose();
     }//GEN-LAST:event_btnLogOutActionPerformed
 
     private void btnViewDoctorsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewDoctorsActionPerformed
     FeedbackDoctors feedback = new FeedbackDoctors();
     feedback.setVisible(true);
-    dispose();   
     }//GEN-LAST:event_btnViewDoctorsActionPerformed
 
     

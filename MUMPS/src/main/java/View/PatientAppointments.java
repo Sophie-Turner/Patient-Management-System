@@ -239,8 +239,7 @@ public class PatientAppointments extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogOutActionPerformed
-        Login login = new Login();
-        login.setVisible(true);
+
         dispose();
     }//GEN-LAST:event_btnLogOutActionPerformed
 
@@ -249,8 +248,7 @@ public class PatientAppointments extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCancelApptActionPerformed
 
     private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
-        PatientHome home = new PatientHome();
-        home.setVisible(true);
+
         dispose();
     }//GEN-LAST:event_btnCancelActionPerformed
 

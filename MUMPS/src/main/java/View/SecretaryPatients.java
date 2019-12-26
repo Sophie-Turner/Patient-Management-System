@@ -151,14 +151,12 @@ public class SecretaryPatients extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCloseAcctActionPerformed
 
     private void btnLogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogOutActionPerformed
-        Login login = new Login();
-        login.setVisible(true);
+
         dispose();
     }//GEN-LAST:event_btnLogOutActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
-        SecretaryHome home = new SecretaryHome();
-        home.setVisible(true);
+
         dispose();
     }//GEN-LAST:event_btnBackActionPerformed
 

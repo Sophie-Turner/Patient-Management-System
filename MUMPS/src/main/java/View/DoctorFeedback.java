@@ -125,15 +125,13 @@ public class DoctorFeedback extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogOutActionPerformed
-        Login login = new Login();
-        login.setVisible(true);
+
         dispose();
         // TODO add your handling code here:
     }//GEN-LAST:event_btnLogOutActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
-        DoctorHome home = new DoctorHome();
-        home.setVisible(true);
+
         dispose();
     }//GEN-LAST:event_btnBackActionPerformed
 

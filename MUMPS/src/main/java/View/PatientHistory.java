@@ -63,6 +63,11 @@ public class PatientHistory extends javax.swing.JFrame {
         btnLogOut.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         btnLogOut.setText("Log Out");
         btnLogOut.setToolTipText("");
+        btnLogOut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLogOutActionPerformed(evt);
+            }
+        });
 
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -131,10 +136,14 @@ public class PatientHistory extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
-        PatientHome home = new PatientHome();
-        home.setVisible(true);
+
         dispose();
     }//GEN-LAST:event_btnBackActionPerformed
+
+    private void btnLogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogOutActionPerformed
+        // TODO add your handling code here:
+        dispose();
+    }//GEN-LAST:event_btnLogOutActionPerformed
 
     /**
      * @param args the command line arguments

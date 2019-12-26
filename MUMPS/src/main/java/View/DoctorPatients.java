@@ -92,6 +92,11 @@ public class DoctorPatients extends javax.swing.JFrame {
         jLabel3.setText("Patient");
 
         drpPatient.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        drpPatient.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                drpPatientActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -156,16 +161,18 @@ public class DoctorPatients extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogOutActionPerformed
-        Login login = new Login();
-        login.setVisible(true);
+
         dispose();
     }//GEN-LAST:event_btnLogOutActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
-        DoctorHome home = new DoctorHome();
-        home.setVisible(true);
+
         dispose();
     }//GEN-LAST:event_btnBackActionPerformed
+
+    private void drpPatientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_drpPatientActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_drpPatientActionPerformed
 
     /**
      * @param args the command line arguments

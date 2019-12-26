@@ -161,14 +161,12 @@ public class PatientPrescriptions extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogOutActionPerformed
-        Login login = new Login();
-        login.setVisible(true);
+
         dispose();
     }//GEN-LAST:event_btnLogOutActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
-        PatientHome home = new PatientHome();
-        home.setVisible(true);
+
         dispose();
     }//GEN-LAST:event_btnBackActionPerformed
 

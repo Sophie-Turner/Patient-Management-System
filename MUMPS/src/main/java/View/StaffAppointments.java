@@ -7,6 +7,7 @@ package View;
 
 import Model.Secretary;
 import Model.Doctor;
+import javax.swing.JOptionPane;
 /**
  *
  * @author pipin
@@ -219,20 +220,20 @@ public class StaffAppointments extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogOutActionPerformed
-        Login login = new Login();
-        login.setVisible(true);
+
         dispose();
     }//GEN-LAST:event_btnLogOutActionPerformed
 
     private void btnBookApptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBookApptActionPerformed
         // TODO add your handling code here:
+        JOptionPane.showMessageDialog(this, "The appointment will be booked."); 
     }//GEN-LAST:event_btnBookApptActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
-        goToHome();
+        dispose();
     }//GEN-LAST:event_btnBackActionPerformed
 
-    public void goToHome(){}
+
     /**
      * @param args the command line arguments
      */

@@ -202,6 +202,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Add new medicine"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnNewMedicineActionPerformed"/>
+      </Events>
     </Component>
     <Container class="javax.swing.JPanel" name="jPanel1">
       <Properties>
@@ -221,9 +224,7 @@
                       <Component id="btnOrderMedicine" max="32767" attributes="0"/>
                       <Component id="btnGiveMeds" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="182" max="32767" attributes="0"/>
-                  <Component id="btnConfirm" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
@@ -232,12 +233,12 @@
                       <Component id="drpMedicine" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="253" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="drpPatient" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                      <Component id="drpPatient" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="155" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="133" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -262,10 +263,7 @@
                   <EmptySpace max="32767" attributes="0"/>
                   <Component id="btnOrderMedicine" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="btnGiveMeds" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="btnConfirm" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="btnGiveMeds" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -281,6 +279,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Order more"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnOrderMedicineActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnGiveMeds">
           <Properties>
@@ -289,11 +290,6 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGiveMedsActionPerformed"/>
           </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="btnConfirm">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Confirm"/>
-          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel3">
           <Properties>

@@ -7,7 +7,7 @@ package Controller;
 import Model.Patient;
 import View.PatientHome;
 import View.PatientAppointments;
-import View.PatientFeedback;
+import View.FeedbackDoctors;
 import View.PatientHistory;
 import View.PatientPrescriptions;
 /**
@@ -17,7 +17,7 @@ import View.PatientPrescriptions;
 public class PatientController {
     private PatientHome homeView = null;
     private PatientAppointments apptView = null;
-    private PatientFeedback feedbackView = null;
+    private FeedbackDoctors feedbackView = null;
     private PatientHistory historyView = null;
     private PatientPrescriptions prescriptionView = null;
     private Patient model = null;
@@ -29,7 +29,7 @@ public class PatientController {
     public void setApptView(PatientAppointments apptView){
         this.apptView = apptView;
     }
-    public void setFeedbackView(PatientFeedback feedbackView){
+    public void setFeedbackView(FeedbackDoctors feedbackView){
         this.feedbackView = feedbackView;
     }
     public void setHistorytView(PatientHistory historyView){

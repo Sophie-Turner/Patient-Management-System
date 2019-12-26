@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<userFile>
+
+ <patientsList>
+
+  <patient>
+   <forename>Mona</forename>
+   <surname>Lotte</surname>
+   <address>7 Sourdough Street</address>
+   <userId>P0001</userId>
+   <age>75</age>
+   <gender>Female</gender>
+  </patient>
+
+ <patient>
+   <forename>Sam</forename>
+   <surname>Sung</surname>
+   <address>101 Galaxy Way</address>
+   <userId>P0002</userId>
+   <age>42</age>
+   <gender>Male</gender>
+  </patient>
+
+ <patient>
+   <forename>Crystal</forename>
+   <surname>Ball</surname>
+   <address>13 Blackcat Lane</address>
+   <userId>P0003</userId>
+   <age>26</age>
+   <gender>Female</gender>
+  </patient>
+
+ <patient>
+   <forename>Ana</forename>
+   <surname>Shole</surname>
+   <address>2 Backway Passage</address>
+   <userId>P0004</userId>
+   <age>38</age>
+   <gender>Female</gender>
+  </patient>
+
+ </patientsList>
+ 
+ <adminList>
+     
+     <administrator>
+        <forename>Nida</forename>
+        <surname>Knapp</surname>
+        <address>99 Slumber Lane</address>
+        <userId>A0001</userId>
+     </administrator>
+     
+     <administrator>
+        <forename>Ben</forename>
+        <surname>Dover</surname>
+        <address>69 Other Way</address>
+        <userId>A0002</userId>
+     </administrator>
+     
+     <administrator>
+        <forename>Brock</forename>
+        <surname>Lee</surname>
+        <address>18 Green Avenue</address>
+        <userId>A0003</userId>
+     </administrator>
+     
+     <administrator>
+        <forename>Don</forename>
+        <surname>Key</surname>
+        <address>4 The Paddocks</address>
+        <userId>A0004</userId>
+     </administrator>
+ 
+ </adminList>
+ 
+ <doctorList> 
+     
+     <doctor>
+        <forename>Dr</forename>
+        <surname>Payne</surname>
+        <address>12 Slaughter Street</address>
+        <userId>D0001</userId>
+     </doctor>
+     
+     <doctor>
+        <forename>Dr</forename>
+        <surname>Jolly</surname>
+        <address>53 Furryduck Road</address>
+        <userId>D0002</userId>
+     </doctor>
+     
+     <doctor>
+        <forename>Dr</forename>
+        <surname>Dusty</surname>
+        <address>88 Flourmill Road</address>
+        <userId>D0003</userId>
+     </doctor>
+     
+     <doctor>
+        <forename>Dr</forename>
+        <surname>Pricey</surname>
+        <address>1 Exclusive Court</address>
+        <userId>D0004</userId>
+     </doctor>
+     
+ </doctorList>
+
+ <secretaryList>
+     
+     <secretary>
+        <forename>Paige</forename>
+        <surname>Turner</surname>
+        <address>15 Library Road</address>
+        <userId>S0001</userId>
+     </secretary>
+     
+     <secretary>
+         <forename>Ray</forename>
+        <surname>Gunn</surname>
+        <address>16 Cosmos Crescent</address>
+        <userId>S0002</userId>
+     </secretary>
+     
+     <secretary>
+         <forename>Sandy</forename>
+        <surname>Stone</surname>
+        <address>11 Boulder Alley</address>
+        <userId>S0003</userId>
+     </secretary>
+     
+     <secretary>
+         <forename>Candy</forename>
+        <surname>Moore</surname>
+        <address>48 Wide Street</address>
+        <userId>S0004</userId>
+     </secretary>
+     
+ </secretaryList>
+
+</userFile>

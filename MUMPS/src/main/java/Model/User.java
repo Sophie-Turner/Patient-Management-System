@@ -5,6 +5,7 @@
  */
 package Model;
 import Strategies.ILoginStrategy;
+import javax.swing.JOptionPane;
 /**
  *
  * @author pipin
@@ -45,28 +46,41 @@ public class User {
    public static ILoginStrategy SelectStrategy(String userId, String password){
         ILoginStrategy loginStrategy;
         loginStrategy = null;
-        switch (userId.charAt(0)) {
-            case 'P':
-                System.out.println("SelectStrategy method in user model recognises username."); //Testing
-               loginStrategy = new Strategies.LoginAsPatientStrategy();
-               break;
-            case 'A':
-                System.out.println("SelectStrategy method in user model recognises username."); //Testing
-               loginStrategy = new Strategies.LoginAsAdminStrategy();
-               break;
-            case 'D':
-                System.out.println("SelectStrategy method in user model recognises username."); //Testing
-               loginStrategy = new Strategies.LoginAsDoctorStrategy();
-               break;
-            case 'S': //Lowercase too!
-               System.out.println("SelectStrategy method in user model recognises username."); //Testing
-               loginStrategy = new Strategies.LoginAsSecretaryStrategy();
-               break;    
-            default: //Message box or something for if they input an invalid username
-            //Remember they need to give a password too!
-        }        
+        boolean isValidUser = false;
+        isValidUser = validateCredentials(userId, password);
+        if(isValidUser == true){
+            switch (userId.charAt(0)) {
+                case 'P':
+                    System.out.println("SelectStrategy method in user model recognises username."); //Testing
+                   loginStrategy = new Strategies.LoginAsPatientStrategy();
+                   break;
+                case 'A':
+                    System.out.println("SelectStrategy method in user model recognises username."); //Testing
+                   loginStrategy = new Strategies.LoginAsAdminStrategy();
+                   break;
+                case 'D':
+                    System.out.println("SelectStrategy method in user model recognises username."); //Testing
+                   loginStrategy = new Strategies.LoginAsDoctorStrategy();
+                   break;
+                case 'S': //Lowercase too?
+                   System.out.println("SelectStrategy method in user model recognises username."); //Testing
+                   loginStrategy = new Strategies.LoginAsSecretaryStrategy();
+                     
+                 //Message box or something for if they input an invalid username
+                }        
+        }else{
+            JOptionPane.showMessageDialog(null, "Incorrect credentials. Please try again, or create a new account."); 
+            loginStrategy = null;
+        }
         return loginStrategy;
     }
+   
+    public static boolean validateCredentials(String userId, String password){
+        boolean isValidUser = true;
+        //check username and password here
+        return isValidUser;
+    }
+   
      public void completeLogin(String userId, String password) {
          System.out.println("CompleteLogin method was called inside User model. Next should be SelectStrategy.");
          this.SetStrategy(SelectStrategy(userId, password));

@@ -152,21 +152,20 @@ public class DoctorHome extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogOutActionPerformed
-        Login login = new Login();
-        login.setVisible(true);
+
         dispose();
     }//GEN-LAST:event_btnLogOutActionPerformed
 
     private void btnApptsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnApptsActionPerformed
         StaffAppointments appts = new StaffAppointments();
         appts.setVisible(true);
-        dispose();
+
     }//GEN-LAST:event_btnApptsActionPerformed
 
     private void btnPatientsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPatientsActionPerformed
         DoctorPatients patientsList = new DoctorPatients();
         patientsList.setVisible(true);
-        dispose();
+
     }//GEN-LAST:event_btnPatientsActionPerformed
 
     private void btnFeedbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFeedbackActionPerformed
@@ -178,7 +177,7 @@ public class DoctorHome extends javax.swing.JFrame {
     private void btnMedicinesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMedicinesActionPerformed
         StaffMedicines meds = new StaffMedicines();
         meds.setVisible(true);
-        dispose();
+
     }//GEN-LAST:event_btnMedicinesActionPerformed
 
     /**

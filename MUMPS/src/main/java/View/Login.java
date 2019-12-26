@@ -155,7 +155,6 @@ public class Login extends javax.swing.JFrame {
     private void btnCreateAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateAccountActionPerformed
         CreateAccount newPatient = new CreateAccount();
         newPatient.setVisible(true);
-        dispose();
     }//GEN-LAST:event_btnCreateAccountActionPerformed
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed

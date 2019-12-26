@@ -7,6 +7,7 @@ package View;
 
 import Model.Doctor;
 import Model.Secretary;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -44,7 +45,6 @@ public class StaffMedicines extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         btnOrderMedicine = new javax.swing.JButton();
         btnGiveMeds = new javax.swing.JButton();
-        btnConfirm = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         drpMedicine = new javax.swing.JComboBox<>();
@@ -95,12 +95,22 @@ public class StaffMedicines extends javax.swing.JFrame {
         jScrollPane1.setViewportView(tblMedicines);
 
         btnNewMedicine.setText("Add new medicine");
+        btnNewMedicine.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNewMedicineActionPerformed(evt);
+            }
+        });
 
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jLabel2.setText("Actions");
 
         btnOrderMedicine.setText("Order more");
+        btnOrderMedicine.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnOrderMedicineActionPerformed(evt);
+            }
+        });
 
         btnGiveMeds.setText("Give to patient");
         btnGiveMeds.addActionListener(new java.awt.event.ActionListener() {
@@ -108,8 +118,6 @@ public class StaffMedicines extends javax.swing.JFrame {
                 btnGiveMedsActionPerformed(evt);
             }
         });
-
-        btnConfirm.setText("Confirm");
 
         jLabel3.setText("Medicine");
 
@@ -133,20 +141,18 @@ public class StaffMedicines extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnOrderMedicine, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnGiveMeds, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 182, Short.MAX_VALUE)
-                .addComponent(btnConfirm)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
                     .addComponent(drpMedicine, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 253, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(drpPatient, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4))
-                .addGap(155, 155, 155))
+                    .addComponent(jLabel4)
+                    .addComponent(drpPatient, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(133, 133, 133))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -166,9 +172,7 @@ public class StaffMedicines extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnOrderMedicine)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnGiveMeds)
-                    .addComponent(btnConfirm))
+                .addComponent(btnGiveMeds)
                 .addContainerGap())
         );
 
@@ -238,7 +242,6 @@ public class StaffMedicines extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnNewMedicine)
                         .addGap(35, 35, 35)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnBack)
@@ -253,21 +256,31 @@ public class StaffMedicines extends javax.swing.JFrame {
     }//GEN-LAST:event_drpMedicineActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
-        goToHome();
+        dispose();
     }//GEN-LAST:event_btnBackActionPerformed
 
     private void btnGiveMedsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGiveMedsActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here: 
+        JOptionPane.showMessageDialog(this, "Medicine given to patient."); 
     }//GEN-LAST:event_btnGiveMedsActionPerformed
 
     private void btnLogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogOutActionPerformed
-        Login login = new Login();
-        login.setVisible(true);
+
         dispose();
     }//GEN-LAST:event_btnLogOutActionPerformed
 
+    private void btnNewMedicineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewMedicineActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(this, "The medicine has been added to the system."); 
+    }//GEN-LAST:event_btnNewMedicineActionPerformed
+
+    private void btnOrderMedicineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrderMedicineActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(this, "The medicine has been ordered."); 
+    }//GEN-LAST:event_btnOrderMedicineActionPerformed
+
     
-    public void goToHome(){}
+
     /**
      * @param args the command line arguments
      */
@@ -306,7 +319,6 @@ public class StaffMedicines extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
-    private javax.swing.JButton btnConfirm;
     private javax.swing.JButton btnGiveMeds;
     private javax.swing.JButton btnLogOut;
     private javax.swing.JButton btnNewMedicine;

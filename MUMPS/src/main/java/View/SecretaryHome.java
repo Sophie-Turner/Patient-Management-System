@@ -5,6 +5,7 @@
  */
 package View;
 import Model.Secretary;
+import javax.swing.JOptionPane;
 /**
  *
  * @author pipin
@@ -121,8 +122,18 @@ public class SecretaryHome extends javax.swing.JFrame {
         jLabel2.setText("Request number");
 
         btnApprove.setText("Approve");
+        btnApprove.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnApproveActionPerformed(evt);
+            }
+        });
 
         btnReject.setText("Reject");
+        btnReject.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRejectActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -203,28 +214,37 @@ public class SecretaryHome extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogOutActionPerformed
-       Login login = new Login();
-        login.setVisible(true);
+
         dispose();
     }//GEN-LAST:event_btnLogOutActionPerformed
 
     private void btnApptsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnApptsActionPerformed
         StaffAppointments appts = new StaffAppointments();
         appts.setVisible(true);
-        dispose();
+
     }//GEN-LAST:event_btnApptsActionPerformed
 
     private void btnPatientsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPatientsActionPerformed
         SecretaryPatients patients = new SecretaryPatients();
         patients.setVisible(true);
-        dispose();
+
     }//GEN-LAST:event_btnPatientsActionPerformed
 
     private void btnMedicinesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMedicinesActionPerformed
         StaffMedicines meds = new StaffMedicines();
         meds.setVisible(true);
-        dispose();
+
     }//GEN-LAST:event_btnMedicinesActionPerformed
+
+    private void btnApproveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnApproveActionPerformed
+        // TODO add your handling code here:
+    JOptionPane.showMessageDialog(this, "The request has been approved.");    
+    }//GEN-LAST:event_btnApproveActionPerformed
+
+    private void btnRejectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRejectActionPerformed
+        // TODO add your handling code here:
+    JOptionPane.showMessageDialog(this, "The request has been rejected.");     
+    }//GEN-LAST:event_btnRejectActionPerformed
 
     /**
      * @param args the command line arguments

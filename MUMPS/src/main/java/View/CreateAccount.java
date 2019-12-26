@@ -238,18 +238,14 @@ public class CreateAccount extends javax.swing.JFrame {
 
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
         JOptionPane.showMessageDialog(this, "Your request will be processed shortly.");
-        backToLogin();     
+        dispose();     
     }//GEN-LAST:event_btnSubmitActionPerformed
 
     private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
-        backToLogin();
+        dispose();
     }//GEN-LAST:event_btnCancelActionPerformed
 
-    public void backToLogin(){
-        Login login = new Login();
-        login.setVisible(true);
-        dispose();
-    }
+
     /**
      * @param args the command line arguments
      */

@@ -173,33 +173,32 @@ public class PatientHome extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogOutActionPerformed
-        Login login = new Login();
-        login.setVisible(true);
+
         dispose();
     }//GEN-LAST:event_btnLogOutActionPerformed
 
     private void btnApptsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnApptsActionPerformed
         PatientAppointments appts = new PatientAppointments();
         appts.setVisible(true);
-        dispose();
+        
     }//GEN-LAST:event_btnApptsActionPerformed
 
     private void btnHistoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHistoryActionPerformed
         PatientHistory history = new PatientHistory();
         history.setVisible(true);
-        dispose();
+        
     }//GEN-LAST:event_btnHistoryActionPerformed
 
     private void btnPrescriptionsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPrescriptionsActionPerformed
         PatientPrescriptions meds = new PatientPrescriptions();
         meds.setVisible(true);
-        dispose();
+        
     }//GEN-LAST:event_btnPrescriptionsActionPerformed
 
     private void btnDoctorsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDoctorsActionPerformed
         FeedbackDoctors doctors = new FeedbackDoctors();
         doctors.setVisible(true);
-        dispose();
+        
     }//GEN-LAST:event_btnDoctorsActionPerformed
 
     private void btnCloseAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCloseAccountActionPerformed
