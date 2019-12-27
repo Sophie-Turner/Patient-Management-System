@@ -15,6 +15,13 @@ and open the template in the editor.
    <userId>P0001</userId>
    <age>75</age>
    <gender>Female</gender>
+   <appointment>
+       <apptDate></apptDate>
+       <apptTime></apptTime>
+       <apptDoctor></apptDoctor>
+       <apptNote></apptNote>
+       <apptOutcome></apptOutcome>
+   </appointment>
   </patient>
 
  <patient>
@@ -24,6 +31,13 @@ and open the template in the editor.
    <userId>P0002</userId>
    <age>42</age>
    <gender>Male</gender>
+   <appointment>
+       <apptDate></apptDate>
+       <apptTime></apptTime>
+       <apptDoctor></apptDoctor>
+       <apptNote></apptNote>
+       <apptOutcome></apptOutcome>
+   </appointment>
   </patient>
 
  <patient>
@@ -33,6 +47,13 @@ and open the template in the editor.
    <userId>P0003</userId>
    <age>26</age>
    <gender>Female</gender>
+   <appointment>
+       <apptDate></apptDate>
+       <apptTime></apptTime>
+       <apptDoctor></apptDoctor>
+       <apptNote></apptNote>
+       <apptOutcome></apptOutcome>
+   </appointment>
   </patient>
 
  <patient>
@@ -42,6 +63,13 @@ and open the template in the editor.
    <userId>P0004</userId>
    <age>38</age>
    <gender>Female</gender>
+   <appointment>
+       <apptDate></apptDate>
+       <apptTime></apptTime>
+       <apptDoctor></apptDoctor>
+       <apptNote></apptNote>
+       <apptOutcome></apptOutcome>
+   </appointment>
   </patient>
 
  </patientsList>
@@ -85,6 +113,12 @@ and open the template in the editor.
         <surname>Payne</surname>
         <address>12 Slaughter Street</address>
         <userId>D0001</userId>
+        <feedback>
+            <feedComment></feedComment>
+            <feedRating></feedRating>
+            <feedApproved>true</feedApproved>
+        </feedback>
+        <averageRating></averageRating>
      </doctor>
      
      <doctor>
@@ -92,6 +126,12 @@ and open the template in the editor.
         <surname>Jolly</surname>
         <address>53 Furryduck Road</address>
         <userId>D0002</userId>
+        <feedback>
+            <feedComment></feedComment>
+            <feedRating></feedRating>
+            <feedApproved>true</feedApproved>
+        </feedback>
+        <averageRating></averageRating>
      </doctor>
      
      <doctor>
@@ -99,6 +139,12 @@ and open the template in the editor.
         <surname>Dusty</surname>
         <address>88 Flourmill Road</address>
         <userId>D0003</userId>
+        <feedback>
+            <feedComment></feedComment>
+            <feedRating></feedRating>
+            <feedApproved>true</feedApproved>
+        </feedback>
+        <averageRating></averageRating>
      </doctor>
      
      <doctor>
@@ -106,6 +152,12 @@ and open the template in the editor.
         <surname>Pricey</surname>
         <address>1 Exclusive Court</address>
         <userId>D0004</userId>
+        <feedback>
+            <feedComment></feedComment>
+            <feedRating></feedRating>
+            <feedApproved>true</feedApproved>
+        </feedback>
+        <averageRating></averageRating>
      </doctor>
      
  </doctorList>
