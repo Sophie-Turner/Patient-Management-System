@@ -41,18 +41,7 @@
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="lblForename" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lblSurname" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="txtSurname" min="-2" pref="175" max="-2" attributes="0"/>
-                                  <Component id="txtForename" min="-2" pref="175" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
+                          <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="lblGender" min="-2" max="-2" attributes="0"/>
@@ -68,6 +57,11 @@
                                   <Component id="radMale" min="-2" max="-2" attributes="0"/>
                                   <Component id="radFemale" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Component id="lblForename" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                              <Component id="txtName" min="-2" pref="175" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace pref="45" max="32767" attributes="0"/>
@@ -120,21 +114,12 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="lblForename" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtForename" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtName" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="lblSurname" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtSurname" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="ftxtDob" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="lblDob" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="lblGender" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="radMale" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -154,6 +139,10 @@
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="lblChoosePassword" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="txtChoosePassword" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" alignment="3" groupAlignment="3" attributes="0">
+                              <Component id="ftxtDob" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblDob" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -211,12 +200,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="lblForename">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Forename"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblSurname">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Surname"/>
+        <Property name="text" type="java.lang.String" value="Name"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblDob">
@@ -265,11 +249,9 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCancelActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtForename">
-    </Component>
-    <Component class="javax.swing.JTextField" name="txtSurname">
+    <Component class="javax.swing.JTextField" name="txtName">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtSurnameActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNameActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JFormattedTextField" name="ftxtDob">

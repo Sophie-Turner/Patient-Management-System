@@ -6,7 +6,6 @@
 package View;
 
 import Model.Doctor;
-
 /**
  *
  * @author pipin
@@ -165,7 +164,7 @@ public class DoctorHome extends javax.swing.JFrame {
     private void btnPatientsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPatientsActionPerformed
         DoctorPatients patientsList = new DoctorPatients();
         patientsList.setVisible(true);
-
+        
     }//GEN-LAST:event_btnPatientsActionPerformed
 
     private void btnFeedbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFeedbackActionPerformed

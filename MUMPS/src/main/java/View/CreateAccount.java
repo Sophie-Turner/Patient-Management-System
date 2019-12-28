@@ -34,7 +34,6 @@ public class CreateAccount extends javax.swing.JFrame {
         lblMumps = new javax.swing.JLabel();
         lblMumpsName = new javax.swing.JLabel();
         lblForename = new javax.swing.JLabel();
-        lblSurname = new javax.swing.JLabel();
         lblDob = new javax.swing.JLabel();
         lblGender = new javax.swing.JLabel();
         lblAddress = new javax.swing.JLabel();
@@ -43,8 +42,7 @@ public class CreateAccount extends javax.swing.JFrame {
         lblConfirmPassword = new javax.swing.JLabel();
         btnSubmit = new javax.swing.JButton();
         btnCancel = new javax.swing.JButton();
-        txtForename = new javax.swing.JTextField();
-        txtSurname = new javax.swing.JTextField();
+        txtName = new javax.swing.JTextField();
         ftxtDob = new javax.swing.JFormattedTextField();
         txtAddress = new javax.swing.JTextField();
         txtEmail = new javax.swing.JTextField();
@@ -68,9 +66,7 @@ public class CreateAccount extends javax.swing.JFrame {
         lblMumpsName.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lblMumpsName.setText("My Uni Medical Practice System");
 
-        lblForename.setText("Forename");
-
-        lblSurname.setText("Surname");
+        lblForename.setText("Name");
 
         lblDob.setText("Date of birth");
 
@@ -98,9 +94,9 @@ public class CreateAccount extends javax.swing.JFrame {
             }
         });
 
-        txtSurname.addActionListener(new java.awt.event.ActionListener() {
+        txtName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtSurnameActionPerformed(evt);
+                txtNameActionPerformed(evt);
             }
         });
 
@@ -130,14 +126,6 @@ public class CreateAccount extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblForename)
-                                    .addComponent(lblSurname))
-                                .addGap(23, 23, 23)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(txtSurname, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtForename, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(lblGender)
                                         .addGap(23, 23, 23))
@@ -147,7 +135,11 @@ public class CreateAccount extends javax.swing.JFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(ftxtDob, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(radMale)
-                                    .addComponent(radFemale))))
+                                    .addComponent(radFemale)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblForename)
+                                .addGap(38, 38, 38)
+                                .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -186,18 +178,11 @@ public class CreateAccount extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lblForename)
-                            .addComponent(txtForename, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblSurname)
-                            .addComponent(txtSurname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(35, 35, 35)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(ftxtDob, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblDob))
-                        .addGap(18, 18, 18)
+                            .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(90, 90, 90)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lblGender)
                             .addComponent(radMale)))
@@ -212,7 +197,10 @@ public class CreateAccount extends javax.swing.JFrame {
                         .addGap(24, 24, 24)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lblChoosePassword)
-                            .addComponent(txtChoosePassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtChoosePassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(ftxtDob, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lblDob)))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lblConfirmPassword)
@@ -232,10 +220,6 @@ public class CreateAccount extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtSurnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSurnameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtSurnameActionPerformed
-
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
         JOptionPane.showMessageDialog(this, "Your request will be processed shortly.");
         dispose();     
@@ -244,6 +228,10 @@ public class CreateAccount extends javax.swing.JFrame {
     private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
         dispose();
     }//GEN-LAST:event_btnCancelActionPerformed
+
+    private void txtNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNameActionPerformed
 
 
     /**
@@ -295,7 +283,6 @@ public class CreateAccount extends javax.swing.JFrame {
     private javax.swing.JLabel lblGender;
     private javax.swing.JLabel lblMumps;
     private javax.swing.JLabel lblMumpsName;
-    private javax.swing.JLabel lblSurname;
     private javax.swing.JLabel lblTitle;
     private javax.swing.JRadioButton radFemale;
     private javax.swing.JRadioButton radMale;
@@ -303,7 +290,6 @@ public class CreateAccount extends javax.swing.JFrame {
     private javax.swing.JTextField txtChoosePassword;
     private javax.swing.JTextField txtConfirmPassword;
     private javax.swing.JTextField txtEmail;
-    private javax.swing.JTextField txtForename;
-    private javax.swing.JTextField txtSurname;
+    private javax.swing.JTextField txtName;
     // End of variables declaration//GEN-END:variables
 }

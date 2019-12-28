@@ -5,6 +5,7 @@
  */
 package Controller;
 import Model.Doctor;
+import Model.InteractWithXML;
 import View.DoctorHome;
 import View.DoctorFeedback;
 import View.DoctorPatients;
@@ -32,4 +33,5 @@ public class DoctorController {
         System.out.println("setModel method in DoctorController was called.");
         this.model=model;
     }
+    
 }

@@ -7,7 +7,7 @@ package Main;
 import Controller.LoginStrategyController;
 import View.Login;
 import Model.User;
-import Model.interactWithXML;
+import Model.InteractWithXML;
 /**
  *
  * @author pipin
@@ -20,7 +20,7 @@ public class Main {
     public static void main(String[] args) {
         
         //A test of the XML classes
-        interactWithXML testDOM = new interactWithXML();
+        InteractWithXML testDOM = new InteractWithXML();
         testDOM.interact();
         
         //Instantiate the model
