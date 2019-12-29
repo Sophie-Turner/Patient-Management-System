@@ -124,7 +124,12 @@ public class PatientAppointments extends javax.swing.JFrame {
 
         lblDate.setText("Date");
 
-        drpDoctor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dr. Nuts", "Dr. Nice", "Dr. Nasty", "Dr. Who" }));
+        drpDoctor.setModel(Model.PopulateLists.PopulateDoctorsList());
+        drpDoctor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                drpDoctorActionPerformed(evt);
+            }
+        });
 
         drpTime.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "09:00", "09:15", "09:30", "09:45", "10:00", "10:15", "10:30", "10:45", "11:00", "11:15", "11:30", "11:45", "12:00", "12:15", "12:30", "12:45", "13:00", "13:15", "13:30", "13:45", "14:00", "14:15", "14:30", "14:45" }));
 
@@ -255,6 +260,10 @@ public class PatientAppointments extends javax.swing.JFrame {
     private void btnPatientBookApptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPatientBookApptActionPerformed
         JOptionPane.showMessageDialog(this, "Your appointment will be booked shortly.");
     }//GEN-LAST:event_btnPatientBookApptActionPerformed
+
+    private void drpDoctorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_drpDoctorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_drpDoctorActionPerformed
 
     /**
      * @param args the command line arguments

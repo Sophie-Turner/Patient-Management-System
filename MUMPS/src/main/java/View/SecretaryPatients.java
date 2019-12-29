@@ -70,7 +70,7 @@ public class SecretaryPatients extends javax.swing.JFrame {
 
         jLabel1.setText("Patient");
 
-        drpPatients.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        drpPatients.setModel(Model.PopulateLists.PopulatePatientsList());
 
         btnCloseAcct.setText("Close account");
         btnCloseAcct.addActionListener(new java.awt.event.ActionListener() {

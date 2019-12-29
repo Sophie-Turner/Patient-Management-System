@@ -7,7 +7,9 @@ package Main;
 import Controller.LoginStrategyController;
 import View.Login;
 import Model.User;
-import Model.InteractWithXML;
+
+import javax.swing.DefaultComboBoxModel;
+import Model.PopulateLists;
 /**
  *
  * @author pipin
@@ -18,11 +20,7 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
-        //A test of the XML classes
-        InteractWithXML testDOM = new InteractWithXML();
-        testDOM.interact();
-        
+             
         //Instantiate the model
         User user = new User();
         //Instantiate the view

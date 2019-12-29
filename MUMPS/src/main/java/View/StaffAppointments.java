@@ -110,11 +110,11 @@ public class StaffAppointments extends javax.swing.JFrame {
 
         lblPatient.setText("Patient");
 
-        drpDoctor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        drpDoctor.setModel(Model.PopulateLists.PopulateDoctorsList());
 
         lblDate.setText("Date");
 
-        drpPatient.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Patient 1", "Patient 2" }));
+        drpPatient.setModel(Model.PopulateLists.PopulatePatientsList());
 
         drpTime.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "09:00", "09:15", "09:30", "09:45", "10:00", "10:15", "10:30", "10:45", "11:00", "11:15", "11:30", "11:45", "12:00", "12:15", "12:30", "12:45", "13:00", "13:15", "13:30", "13:45", "14:00", "14:15", "14:30", "14:45" }));
 

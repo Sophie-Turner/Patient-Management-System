@@ -6,6 +6,8 @@
 package View;
 
 import Model.Doctor;
+import Model.PopulateLists;
+import javax.swing.DefaultComboBoxModel;
 /**
  *
  * @author pipin
@@ -162,8 +164,9 @@ public class DoctorHome extends javax.swing.JFrame {
     }//GEN-LAST:event_btnApptsActionPerformed
 
     private void btnPatientsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPatientsActionPerformed
+
         DoctorPatients patientsList = new DoctorPatients();
-        patientsList.setVisible(true);
+        patientsList.setVisible(true);   
         
     }//GEN-LAST:event_btnPatientsActionPerformed
 

@@ -282,15 +282,13 @@
         </Component>
         <Component class="javax.swing.JComboBox" name="drpDoctor">
           <Properties>
-            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="4">
-                <StringItem index="0" value="Dr. Nuts"/>
-                <StringItem index="1" value="Dr. Nice"/>
-                <StringItem index="2" value="Dr. Nasty"/>
-                <StringItem index="3" value="Dr. Who"/>
-              </StringArray>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="Model.PopulateLists.PopulateDoctorsList()" type="code"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="drpDoctorActionPerformed"/>
+          </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
           </AuxValues>

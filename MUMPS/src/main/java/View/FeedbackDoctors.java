@@ -86,9 +86,16 @@ public class FeedbackDoctors extends javax.swing.JFrame {
                 "Doctor's name", "Average rating", "Comments"
             }
         ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.Float.class, java.lang.String.class
+            };
             boolean[] canEdit = new boolean [] {
                 false, false, false
             };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
@@ -96,6 +103,7 @@ public class FeedbackDoctors extends javax.swing.JFrame {
         });
         tblDoctors.setEnabled(false);
         tblDoctors.setRowSelectionAllowed(false);
+        tblDoctors.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(tblDoctors);
 
         lblDoctor.setText("Doctor");
@@ -127,7 +135,7 @@ public class FeedbackDoctors extends javax.swing.JFrame {
         lblTitle1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lblTitle1.setText("Provide feedback to a doctor");
 
-        drpDoctor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dr. Nuts", "Dr. Nice", "Dr. Nasty", "Dr. Who" }));
+        drpDoctor.setModel(Model.PopulateLists.PopulateDoctorsList());
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

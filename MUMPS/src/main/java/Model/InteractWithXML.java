@@ -13,6 +13,7 @@ import javax.xml.parsers.*; //store XML elements as DOM objects.
  */
 public class InteractWithXML {
     
+    /* A test
     public void interact(){
         Document userFile = getDocument("./src/main/java/dataFiles/userFile.xml");
         System.out.println("The root of the XML file is: " + 
@@ -24,23 +25,9 @@ public class InteractWithXML {
         String name = "name";
         getDoctorNames(listOfDoctors, name);
     }
+    */
     
-    public void getDoctorNames(NodeList listOfDoctors, String name){
-        //This method shows the names of each doctor.
-        for(int i = 0; i<listOfDoctors.getLength(); i++){
-            Node doctorNode = listOfDoctors.item(i);
-            Element doctorElement = (Element)doctorNode;
-                 //Turn it into an element                    
-            NodeList nameList = doctorElement.getElementsByTagName(name);         
-                 //Create list of elements
-            Element nameElement = (Element)nameList.item(0);
-                //get first element
-            NodeList nameElementList = nameElement.getChildNodes();
-                //get contents of name fields
-            System.out.println(
-                    ((Node)nameElementList.item(0)).getNodeValue().trim() );
-        }
-    }
+    //Clean up these methods later. Reduce repeated code and separate classes in keeping with SOLID. 
     
     public static Document getDocument(String fileSource){
         try {
@@ -84,6 +71,90 @@ public class InteractWithXML {
             //Fill array with each name
         }
         return allPatientNames;
+    }
+    
+    public static String[] getAllDoctorNames(){
+        Document userFile = getDocument("./src/main/java/dataFiles/userFile.xml");
+        NodeList listOfDoctors = userFile.getElementsByTagName("doctor");
+        String[] allDoctorNames = new String[listOfDoctors.getLength()];
+        for(int i = 0; i<listOfDoctors.getLength(); i++){
+            Node doctorsNode = listOfDoctors.item(i);
+            Element doctorsElement = (Element)doctorsNode;
+                 //Turn it into an element                    
+            NodeList nameList = doctorsElement.getElementsByTagName("name");           
+                 //Create list of elements
+            Element nameElement = (Element)nameList.item(0);
+                //get first element
+            NodeList nameElementList = nameElement.getChildNodes();
+                //get contents of name fields
+            allDoctorNames[i] = 
+                    ((Node)nameElementList.item(0)).getNodeValue();
+            //Fill array with each name
+        }
+        return allDoctorNames;
+    }
+    
+    public static String[] getAllMedicineNames(){
+        Document medsFile = getDocument("./src/main/java/dataFiles/medicineFile.xml");
+        NodeList listOfMeds = medsFile.getElementsByTagName("medicine");
+        String[] allMedsNames = new String[listOfMeds.getLength()];
+        for(int i = 0; i<listOfMeds.getLength(); i++){
+            Node MedsNode = listOfMeds.item(i);
+            Element MedsElement = (Element)MedsNode;
+                 //Turn it into an element                    
+            NodeList nameList = MedsElement.getElementsByTagName("name");           
+                 //Create list of elements
+            Element nameElement = (Element)nameList.item(0);
+                //get first element
+            NodeList nameElementList = nameElement.getChildNodes();
+                //get contents of name fields
+            allMedsNames[i] = 
+                    ((Node)nameElementList.item(0)).getNodeValue();
+            //Fill array with each name
+        }
+        return allMedsNames;
+    }
+    
+    public static String[] getAllDoctorComments(){
+        Document userFile = getDocument("./src/main/java/dataFiles/userFile.xml");
+        NodeList listOfDoctors = userFile.getElementsByTagName("doctor");
+        String[] allDoctorComments = new String[listOfDoctors.getLength()];
+        for(int i = 0; i<listOfDoctors.getLength(); i++){
+            Node doctorsNode = listOfDoctors.item(i);
+            Element doctorsElement = (Element)doctorsNode;
+                 //Turn it into an element                    
+            NodeList commentList = doctorsElement.getElementsByTagName("feedComment");           
+                 //Create list of elements
+            Element commentElement = (Element)commentList.item(0);
+                //get first element
+            NodeList commentElementList = commentElement.getChildNodes();
+                //get contents of name fields
+            allDoctorComments[i] = 
+                    ((Node)commentElementList.item(0)).getNodeValue();
+            //Fill array with each name
+        }
+        return allDoctorComments;      
+    }
+    
+     public static String[] getAllDoctorRatings(){
+        Document userFile = getDocument("./src/main/java/dataFiles/userFile.xml");
+        NodeList listOfDoctors = userFile.getElementsByTagName("doctor");
+        String[] allDoctorRatings = new String[listOfDoctors.getLength()];
+        for(int i = 0; i<listOfDoctors.getLength(); i++){
+            Node doctorsNode = listOfDoctors.item(i);
+            Element doctorsElement = (Element)doctorsNode;
+                 //Turn it into an element                    
+            NodeList ratingList = doctorsElement.getElementsByTagName("averageRating");           
+                 //Create list of elements
+            Element ratingElement = (Element)ratingList.item(0);
+                //get first element
+            NodeList ratingElementList = ratingElement.getChildNodes();
+                //get contents of name fields
+            allDoctorRatings[i] = 
+                    ((Node)ratingElementList.item(0)).getNodeValue();
+            //Fill array with each name
+        }
+        return allDoctorRatings;      
     }
     
     /*Finish this method later.

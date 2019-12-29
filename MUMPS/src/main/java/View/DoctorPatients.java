@@ -91,11 +91,7 @@ public class DoctorPatients extends javax.swing.JFrame {
 
         jLabel3.setText("Patient");
 
-        drpPatients.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                drpPatientsActionPerformed(evt);
-            }
-        });
+        drpPatients.setModel(Model.PopulateLists.PopulatePatientsList());
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -168,10 +164,6 @@ public class DoctorPatients extends javax.swing.JFrame {
 
         dispose();
     }//GEN-LAST:event_btnBackActionPerformed
-
-    private void drpPatientsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_drpPatientsActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_drpPatientsActionPerformed
 
     /**
      * @param args the command line arguments

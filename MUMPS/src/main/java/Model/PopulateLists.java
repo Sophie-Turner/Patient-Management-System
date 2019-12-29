@@ -6,6 +6,7 @@
 package Model;
 import Model.InteractWithXML;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.table.DefaultTableModel;
 /**
  *
  * @author pipin
@@ -13,21 +14,8 @@ import javax.swing.DefaultComboBoxModel;
 public class PopulateLists {
     //Use interface or design pattern for this later.
     
-    //Receive the box and set model
-    public void PopulatePatientsLists(javax.swing.JComboBox drp){
-        //Parameter for which box we need to populate.
-        String[] allPatients = new String[]{};
-        allPatients = InteractWithXML.getAllPatientNames();
-        //Put the patients' names into the array.
-        DefaultComboBoxModel drpPatientsItems = new DefaultComboBoxModel(allPatients);
-        //Put the array into the box.
-        drp.setModel(drpPatientsItems);
-        //Apply it.
-    }
-    
     //Return model
-    public DefaultComboBoxModel PopulatePatientsList(){
-        //Parameter for which box we need to populate.
+    public static DefaultComboBoxModel PopulatePatientsList(){
         String[] allPatients = new String[]{};
         allPatients = InteractWithXML.getAllPatientNames();
         //Put the patients' names into the array.
@@ -35,4 +23,26 @@ public class PopulateLists {
         //Put the array into the box.
         return drpPatientsItems;
     }
+    
+    public static DefaultComboBoxModel PopulateDoctorsList(){
+        String[] allDoctors = new String[]{};
+        allDoctors = InteractWithXML.getAllDoctorNames();
+        DefaultComboBoxModel drpDoctorsItems = new DefaultComboBoxModel(allDoctors);
+        //Put the array into the box.
+        return drpDoctorsItems;
+    }
+    
+    public static DefaultComboBoxModel PopulateMedicinesList(){
+        String[] allMeds = new String[]{};
+        allMeds = InteractWithXML.getAllMedicineNames();
+        DefaultComboBoxModel drpMedsItems = new DefaultComboBoxModel(allMeds);
+        //Put the array into the box.
+        return drpMedsItems;
+    }
+    /*
+    public static DefaultTableModel PopulateDoctorsTable(){
+        Object[][] allDoctorInfo = new Object[][]{};
+        allDoctorInfo = 
+    }
+    */
 }
