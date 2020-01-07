@@ -18,6 +18,11 @@ public class Login extends javax.swing.JFrame {
     public Login() {
         initComponents();
     }
+
+    /**
+     *
+     * @param strategy
+     */
     public void addButtonHandlerStrategy(ActionListener strategy){
         btnLogin.addActionListener(strategy);
     }
@@ -161,14 +166,28 @@ public class Login extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnLoginActionPerformed
     //Return the user input to the controller
+
+    /**
+     *
+     * @return
+     */
     public String getUsername(){
         String usernameTyped = txtUsername.getText();
         return usernameTyped;
     }
+
+    /**
+     *
+     * @return
+     */
     public String getPassword(){
         String passwordTyped = pwdPassword.getText();
         return passwordTyped;
     }
+
+    /**
+     *
+     */
     public void clearAll(){
         txtUsername.setText("");
         pwdPassword.setText("");

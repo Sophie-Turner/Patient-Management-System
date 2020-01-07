@@ -1,13 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Controller;
 
 /**
  *
  * @author pipin
+ * When finished this will call a method which will take the user type and display the
+ * 'view doctors' frame with appropriate parameters for that user type 
+ * because multiple users can access this view but may have different permissions to interact with it.
  */
 public class ViewDoctorsStrategyController {
     

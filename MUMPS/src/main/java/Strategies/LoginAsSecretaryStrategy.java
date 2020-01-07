@@ -9,6 +9,9 @@ import Controller.SecretaryController;
  */
 public class LoginAsSecretaryStrategy implements ILoginStrategy {
     
+    /**
+     *
+     */
     @Override
     public void completeLogin(){
     //Should I create an instance of a secretary here? Yes.

@@ -12,6 +12,10 @@ import Controller.DoctorController;
  * @author pipin
  */
 public class LoginAsDoctorStrategy implements ILoginStrategy {
+
+    /**
+     *
+     */
     @Override
     public void completeLogin(){
         System.out.println("CompleteLogin method in LoginAsDoctorStrategy was called.");

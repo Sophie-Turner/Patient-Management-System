@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Model;
 import org.xml.sax.*; //faster way to read data from XML.
 import org.w3c.dom.*; //read and write XML.
@@ -10,6 +6,9 @@ import javax.xml.parsers.*; //store XML elements as DOM objects.
 /**
  *
  * @author pipin
+ * Reads data from the XML file and sends it to the program.
+ * Clean up these methods later. 
+ * Reduce repeated code and separate classes in keeping with SOLID. 
  */
 public class InteractWithXML {
     
@@ -29,6 +28,12 @@ public class InteractWithXML {
     
     //Clean up these methods later. Reduce repeated code and separate classes in keeping with SOLID. 
     
+    /**
+     * Gets the XML file and puts it into DOM so it can be read.
+     * @param fileSource The location of the XML file.
+     * @return 
+     * 
+     */
     public static Document getDocument(String fileSource){
         try {
            DocumentBuilderFactory documentFactory = DocumentBuilderFactory.newInstance();
@@ -52,6 +57,11 @@ public class InteractWithXML {
         return null;
     }
     
+    /**
+     * Finds the names of all the patients by looping through the XML file and sends them back to
+     * where the method was called as a string array.
+     * @return 
+     */
     public static String[] getAllPatientNames(){
         Document userFile = getDocument("./src/main/java/dataFiles/userFile.xml");
         NodeList listOfPatients = userFile.getElementsByTagName("patient");
@@ -73,6 +83,11 @@ public class InteractWithXML {
         return allPatientNames;
     }
     
+    /**
+     * Finds the names of all the doctors by looping through the XML file and sends them back to
+     * where the method was called as a string array.
+     * @return the listOfDoctors array.
+     */
     public static String[] getAllDoctorNames(){
         Document userFile = getDocument("./src/main/java/dataFiles/userFile.xml");
         NodeList listOfDoctors = userFile.getElementsByTagName("doctor");
@@ -94,6 +109,11 @@ public class InteractWithXML {
         return allDoctorNames;
     }
     
+    /**
+     * Finds the names of all the medicines by looping through the XML file and sends them back to
+     * where the method was called as a string array.
+     * @return the listOfMeds array.
+     */
     public static String[] getAllMedicineNames(){
         Document medsFile = getDocument("./src/main/java/dataFiles/medicineFile.xml");
         NodeList listOfMeds = medsFile.getElementsByTagName("medicine");
@@ -115,6 +135,11 @@ public class InteractWithXML {
         return allMedsNames;
     }
     
+    /**
+     * Finds the comments for all the doctors by looping through the XML file and sends them back to
+     * where the method was called as a string array.
+     * @return the listOfComments array.
+     */
     public static String[] getAllDoctorComments(){
         Document userFile = getDocument("./src/main/java/dataFiles/userFile.xml");
         NodeList listOfDoctors = userFile.getElementsByTagName("doctor");
@@ -136,6 +161,11 @@ public class InteractWithXML {
         return allDoctorComments;      
     }
     
+    /**
+     * Finds the ratings of all the doctors by looping through the XML file and sends them back to
+     * where the method was called as a string array.
+     * @return the listOfRatings array.
+     */
      public static String[] getAllDoctorRatings(){
         Document userFile = getDocument("./src/main/java/dataFiles/userFile.xml");
         NodeList listOfDoctors = userFile.getElementsByTagName("doctor");
@@ -157,7 +187,7 @@ public class InteractWithXML {
         return allDoctorRatings;      
     }
     
-    /*Finish this method later.
+    /*Finish this method later for one doctor.
     public String[] getFeedbackComments(String doctorSurname, NodeList listOfDoctors){
         
         for(int i = 0; i<listOfDoctors.getLength(); i++){

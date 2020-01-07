@@ -12,38 +12,86 @@ import javax.swing.JOptionPane;
  */
 public class User {
  
+    /**
+     *
+     */
     protected String forename;
+
+    /**
+     *
+     */
     protected String surname;
+
+    /**
+     *
+     */
     protected String address;
+
+    /**
+     *
+     */
     protected String userId;   
+
+    /**
+     *
+     */
     protected ILoginStrategy loginStrategy;
 
+    /**
+     *
+     * @return
+     */
     public String getForename() {
         return forename;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getSurname() {
         return surname;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getAddress() {
         return address;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getUserId() {
         return userId;
     }
     
+    /**
+     *
+     */
     public User() {
         this.loginStrategy = null;
     }
     
+    /**
+     *
+     * @param loginStrategy
+     */
     public void SetStrategy(ILoginStrategy loginStrategy){
         System.out.println("SetStrategy method was called inside User model.");
         this.loginStrategy = loginStrategy;
     }
     
-   public static ILoginStrategy SelectStrategy(String userId, String password){
+    /**
+     *
+     * @param userId
+     * @param password
+     * @return
+     */
+    public static ILoginStrategy SelectStrategy(String userId, String password){
         ILoginStrategy loginStrategy;
         loginStrategy = null;
         boolean isValidUser = false;
@@ -75,13 +123,24 @@ public class User {
         return loginStrategy;
     }
    
+    /**
+     *
+     * @param userId
+     * @param password
+     * @return
+     */
     public static boolean validateCredentials(String userId, String password){
         boolean isValidUser = true;
         //check username and password here
         return isValidUser;
     }
    
-     public void completeLogin(String userId, String password) {
+    /**
+     *
+     * @param userId
+     * @param password
+     */
+    public void completeLogin(String userId, String password) {
          System.out.println("CompleteLogin method was called inside User model. Next should be SelectStrategy.");
          this.SetStrategy(SelectStrategy(userId, password));
          this.loginStrategy.completeLogin();

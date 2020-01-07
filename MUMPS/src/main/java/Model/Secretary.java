@@ -10,6 +10,13 @@ package Model;
  */
 public class Secretary extends User {
     
+    /**
+     *
+     * @param forename
+     * @param surname
+     * @param address
+     * @param userId
+     */
     public Secretary(String forename, String surname, String address, String userId){
     this.forename = forename;
     this.surname = surname;
@@ -17,11 +24,20 @@ public class Secretary extends User {
     this.userId = userId;
    } 
     
-   public void approveAccount(){}
+    /**
+     *
+     */
+    public void approveAccount(){}
    
-   public void removePatient(){}
+    /**
+     *
+     */
+    public void removePatient(){}
    
-   public void approveAppointment(){}
+    /**
+     *
+     */
+    public void approveAppointment(){}
     
    //Secretary testSecretary = new Secretary("Gupinda", "Guppy", "20 Chandra Place, Kirbyton", "S001");
 }

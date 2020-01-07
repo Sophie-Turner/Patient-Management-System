@@ -15,6 +15,11 @@ public class PopulateLists {
     //Use interface or design pattern for this later.
     
     //Return model
+
+    /**
+     *
+     * @return
+     */
     public static DefaultComboBoxModel PopulatePatientsList(){
         String[] allPatients = new String[]{};
         allPatients = InteractWithXML.getAllPatientNames();
@@ -24,6 +29,10 @@ public class PopulateLists {
         return drpPatientsItems;
     }
     
+    /**
+     *
+     * @return
+     */
     public static DefaultComboBoxModel PopulateDoctorsList(){
         String[] allDoctors = new String[]{};
         allDoctors = InteractWithXML.getAllDoctorNames();
@@ -32,6 +41,10 @@ public class PopulateLists {
         return drpDoctorsItems;
     }
     
+    /**
+     *
+     * @return
+     */
     public static DefaultComboBoxModel PopulateMedicinesList(){
         String[] allMeds = new String[]{};
         allMeds = InteractWithXML.getAllMedicineNames();

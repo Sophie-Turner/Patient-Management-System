@@ -12,6 +12,10 @@ import Controller.AdminController;
  * @author pipin
  */
 public class LoginAsAdminStrategy implements ILoginStrategy {
+
+    /**
+     *
+     */
     @Override
     public void completeLogin(){
         System.out.println("CompleteLogin method in LoginAsAdminStrategy was called.");

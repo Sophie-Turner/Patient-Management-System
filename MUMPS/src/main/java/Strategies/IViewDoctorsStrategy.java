@@ -10,5 +10,9 @@ package Strategies;
  * @author pipin
  */
 public interface IViewDoctorsStrategy {
+
+    /**
+     *
+     */
     public void ViewDoctors(); //pass in user type?
 }
