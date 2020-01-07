@@ -17,7 +17,8 @@ public class Administrator extends User {
     this.userId = userId;
    } 
     
-   public void createUser(String userType){
+   
+   public void createOtherUser(String userType){
     switch (userType){
         case "Administrator":
             
@@ -31,7 +32,8 @@ public class Administrator extends User {
     }    
    }
    
-   public void removeUser(){}
+   public void removeOtherUser(String userId){}
    
+
    //Administrator testAdmin = new Administrator("Angus", "Bovey", "12 Castle Drive, Ebrington", "A001");
 }
