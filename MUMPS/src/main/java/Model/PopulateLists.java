@@ -3,6 +3,7 @@ package Model;
 import Model.InteractWithXML;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.DefaultListModel;
 /**
  *
  * @author pipin
@@ -21,7 +22,7 @@ public class PopulateLists {
      * @return the array of names.
      */
     public static DefaultComboBoxModel PopulatePatientsList(){
-        String[] allPatients = new String[]{};
+        String[] allPatients;
         allPatients = InteractWithXML.getAllPatientNames();
         //Put the patients' names into the array.
         DefaultComboBoxModel drpPatientsItems = new DefaultComboBoxModel(allPatients);
@@ -34,7 +35,7 @@ public class PopulateLists {
      * @return the array of names.
      */
     public static DefaultComboBoxModel PopulateDoctorsList(){
-        String[] allDoctors = new String[]{};
+        String[] allDoctors;
         allDoctors = InteractWithXML.getAllDoctorNames();
         DefaultComboBoxModel drpDoctorsItems = new DefaultComboBoxModel(allDoctors);
         //Put the array into the box.
@@ -43,14 +44,31 @@ public class PopulateLists {
     
     /**
      * Make a combobox model to put the names of medicines into a combobox on the JFrame.
-     * @return the array of names.
+     * @return the array of names as a combo box model.
      */
     public static DefaultComboBoxModel PopulateMedicinesList(){
-        String[] allMeds = new String[]{};
+        String[] allMeds;
         allMeds = InteractWithXML.getAllMedicineNames();
         DefaultComboBoxModel drpMedsItems = new DefaultComboBoxModel(allMeds);
         //Put the array into the box.
         return drpMedsItems;
+    }
+    
+    /**
+     * Make a list model to show doctors their own feedback.
+     */    
+        public DefaultListModel PopulateFeedbackList(){
+        //String whichDoctor = Doctor.getUserId(); 
+        //Test it with this doctor.
+        String whichDoctor = "D0001";
+        
+        String[] oneDocFeedback;
+        oneDocFeedback = InteractWithXML.getOneDoctorComments(whichDoctor);
+        DefaultListModel lstDoctorFeedback = new DefaultListModel();
+        for(int i =0; i<oneDocFeedback.length;i++){
+            lstDoctorFeedback.addElement(oneDocFeedback[i]);
+        }        
+        return lstDoctorFeedback;
     }
     /* Try a table format
     public static DefaultTableModel PopulateDoctorsTable(){

@@ -9,9 +9,9 @@ import javax.xml.parsers.*; //store XML elements as DOM objects.
  * Reads data from the XML file and sends it to the program.
  * <p>
  * Clean up these methods later. 
+ * Some of these methods are polymorphisms of one another.
  * Reduce repeated code and separate classes in keeping with SOLID. 
- * Try getting more info during the same loop?
- * Could use factory pattern.
+ * Use relevant design pattern.
  * </p>
  */
 public class InteractWithXML {
@@ -149,18 +149,87 @@ public class InteractWithXML {
         for(int i = 0; i<listOfDoctors.getLength(); i++){
             Node doctorsNode = listOfDoctors.item(i);
             Element doctorsElement = (Element)doctorsNode;
-                 //Turn it into an element                    
+                 //Turn it into an element    
             NodeList commentList = doctorsElement.getElementsByTagName("feedComment");           
                  //Create list of elements
             Element commentElement = (Element)commentList.item(0);
                 //get first element
             NodeList commentElementList = commentElement.getChildNodes();
-                //get contents of name fields
+                //get contents of fields
             allDoctorComments[i] = 
                     ((Node)commentElementList.item(0)).getNodeValue();
-            //Fill array with each name
+            //Fill array with each comment
         }
         return allDoctorComments;      
+    }
+    
+    /**
+     * Do a linear search through the doctors for the doctor we want. 
+     * Then loop through their feedback and return feedback that has been approved.
+     * @param whichDoctor
+     * @return 
+     */
+    public static String[] getOneDoctorComments(String whichDoctor){
+        //Get the file
+        Document userFile = getDocument("./src/main/java/dataFiles/userFile.xml");
+        
+        //make a list of doctors
+        NodeList listOfDoctors = userFile.getElementsByTagName("doctor");
+        //make a string array to hold the result later
+        String[] oneDoctorComments=null;
+        //loop through the doctors
+        for(int i = 0; i<listOfDoctors.getLength(); i++){
+            //move to the next doctor
+            Node doctorNode = listOfDoctors.item(i);
+            //put it into an element
+            Element doctorElement = (Element)doctorNode;
+            
+            //Get the userId element for this doctor
+            NodeList userIdList = doctorElement.getElementsByTagName("userId");
+            //put it into an element
+            Element userIdElement = (Element)userIdList.item(0);           
+            //get the value/s 
+            NodeList userIdElementList = userIdElement.getChildNodes();            
+            //see if this is the correct userId
+            if(userIdElementList.item(0).getNodeValue() == whichDoctor){
+                
+                //get the feedback element for this doctor
+                NodeList feedbackList = doctorElement.getElementsByTagName("feedback");
+                //now we have the feedback list we can set the length of the array               
+                oneDoctorComments = new String[feedbackList.getLength()];
+                //loop through the feedback
+                for(int j=0;j<feedbackList.getLength();j++){                
+                    //move to the next feedback
+                    Node feedbackNode = feedbackList.item(j);
+                    //put it into an element
+                    Element feedbackElement = (Element)feedbackNode;
+                    
+                    //Get the approved element for this feedback
+                    NodeList approvedList=feedbackElement.getElementsByTagName("feedApproved");
+                    //put it into an element
+                    Element approvedElement = (Element)approvedList.item(0);
+                    //get the value
+                    NodeList approvedElementList = approvedElement.getChildNodes();                                       
+                    //See if the feedback was approved.
+                    if(approvedElementList.item(0).getNodeValue() == "true"){
+                        
+                        //get the comment element for this feedback
+                        NodeList commentList = feedbackElement.getElementsByTagName("feedComment");
+                        //put it into an element
+                        Element commentElement = (Element)commentList.item(0);
+                        //get the value
+                        NodeList commentElementList = commentElement.getChildNodes();
+                        //Put the feedback into the array.
+                        oneDoctorComments[j]=((Node)commentElementList.item(0)).getNodeValue();
+                    }else{
+                        //or not
+                        oneDoctorComments[j]="Unapproved comment.";
+                    }
+                }
+            break;
+            }
+        }
+        return oneDoctorComments;
     }
     
     /**
