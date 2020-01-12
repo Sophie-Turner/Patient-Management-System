@@ -70,10 +70,11 @@ public class PopulateLists {
         }        
         return lstDoctorFeedback;
     }
-    /* Try a table format
-    public static DefaultTableModel PopulateDoctorsTable(){
-        Object[][] allDoctorInfo = new Object[][]{};
-        allDoctorInfo = 
+
+        public static DefaultTableModel PopulateFeedbackTable(){        
+        String[] headers = new String[]{"Doctor's name", "Average rating", "Comments"};
+        String[][] data = InteractWithXML.getDoctorFeedbackObject();
+        DefaultTableModel feedbackTable = new DefaultTableModel(data, headers);
+        return feedbackTable;
     }
-    */
 }

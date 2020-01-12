@@ -258,22 +258,67 @@ public class InteractWithXML {
         return allDoctorRatings;      
     }
     
-    /*Finish this method later for one doctor.
-    public String[] getFeedbackComments(String doctorSurname, NodeList listOfDoctors){
-        
+public static String[][] getDoctorFeedbackObject(){
+        String[][] doctorFeedbackObject = new String[][]{};
+        Document userFile = getDocument("./src/main/java/dataFiles/userFile.xml");
+        NodeList listOfDoctors = userFile.getElementsByTagName("doctor");
+
         for(int i = 0; i<listOfDoctors.getLength(); i++){
+            Node doctorNode = listOfDoctors.item(i);
+            Element doctorElement = (Element)doctorNode;
             
-            if ( == doctorSurname){
+            //get the name
+            NodeList nameList = doctorElement.getElementsByTagName("name");           
+                 //Create list of elements
+            Element nameElement = (Element)nameList.item(0);
+                //get first element
+            NodeList nameElementList = nameElement.getChildNodes();
+                //get contents of name fields
+            
+            //Put the name into the object
+            doctorFeedbackObject[i][0] = ((Node)nameElementList.item(0)).getNodeValue();
+            
+            //get the average rating
+            NodeList ratingList = doctorElement.getElementsByTagName("averageRating");           
+                 //Create list of elements
+            Element ratingElement = (Element)ratingList.item(0);
+                //get first element
+            NodeList ratingElementList = ratingElement.getChildNodes();
+            
+            //Put the avg ragint into the object
+            doctorFeedbackObject[i][1] = ((Node)ratingElementList.item(0)).getNodeValue();
+            
+            //get the feedback element for this doctor
+            NodeList feedbackList = doctorElement.getElementsByTagName("feedback");
+            //move to the next feedback
+            Node feedbackNode = feedbackList.item(0);
+            //put it into an element
+            Element feedbackElement = (Element)feedbackNode;
+
+            //Get the approved element for this feedback
+            NodeList approvedList=feedbackElement.getElementsByTagName("feedApproved");
+            //put it into an element
+            Element approvedElement = (Element)approvedList.item(0);
+            //get the value
+            NodeList approvedElementList = approvedElement.getChildNodes();                                       
+            //See if the feedback was approved.
+            if(approvedElementList.item(0).getNodeValue() == "true"){
+                                
+                //get the comment element for this feedback
+                NodeList commentList = feedbackElement.getElementsByTagName("feedComment");
+                //put it into an element
+                Element commentElement = (Element)commentList.item(0);
+                //get the value
+                NodeList commentElementList = commentElement.getChildNodes();
                 
-                String[] feedbackComments = new String[]{};
-                //Create an array to hold all feedback comments for this doctor
+                //Put the comment into the object
+                doctorFeedbackObject[i][2] = ((Node)commentElementList.item(0)).getNodeValue();
+                
+            }else{
+                doctorFeedbackObject[i][2] = "";
             }
-        }
-        return feedbackComments;
-    }
-    public String getFeedbackRating(String doctorSurname){
+        }        
         
-        return("");
-    }
-    */
+        return doctorFeedbackObject;
+    } 
 }
