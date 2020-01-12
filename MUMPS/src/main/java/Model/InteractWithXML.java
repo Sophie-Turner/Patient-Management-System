@@ -86,6 +86,80 @@ public class InteractWithXML {
     }
     
     /**
+     * This method recalculates the average rating of a doctor each time a new piece of feedback is approved. 
+     * @param userId the doctor's username.
+     * @param newRating the rating from the newly approved feedback.
+     * @return the newly calculated average.
+     * <p>It loops through the doctors to do a linear search for the doctor in question.
+     * Then it counts the number of approved feedbacks. Then it gets the average rating of that doctor so far, 
+     * and adds the new rating to it. It adds 1 to the number of feedbacks and divides to get the new average.</p> 
+     */
+    public float calculateAverageRating(String userId, float newRating){
+        float averageRating=0;
+        int numOfFeedbacks = 1;
+        
+        //Get the file
+        Document userFile = getDocument("./src/main/java/dataFiles/userFile.xml");
+        
+        //make a list of doctors
+        NodeList listOfDoctors = userFile.getElementsByTagName("doctor");
+        
+        //loop through the doctors
+        for(int i = 0; i<listOfDoctors.getLength(); i++){
+            //move to the next doctor
+            Node doctorNode = listOfDoctors.item(i);
+            //put it into an element
+            Element doctorElement = (Element)doctorNode;
+            
+            //Get the userId element for this doctor
+            NodeList userIdList = doctorElement.getElementsByTagName("userId");
+            //put it into an element
+            Element userIdElement = (Element)userIdList.item(0);           
+            //get the value/s 
+            NodeList userIdElementList = userIdElement.getChildNodes();            
+            //see if this is the correct userId
+            if(userIdElementList.item(0).getNodeValue() == userId){
+                
+                //get the feedback element for this doctor
+                NodeList feedbackList = doctorElement.getElementsByTagName("feedback");                
+                
+                //loop through the feedback
+                for(int j=0;j<feedbackList.getLength();j++){                
+                    //move to the next feedback
+                    Node feedbackNode = feedbackList.item(j);
+                    //put it into an element
+                    Element feedbackElement = (Element)feedbackNode;
+                    
+                    //Get the approved element for this feedback
+                    NodeList approvedList=feedbackElement.getElementsByTagName("feedApproved");
+                    //put it into an element
+                    Element approvedElement = (Element)approvedList.item(0);
+                    //get the value
+                    NodeList approvedElementList = approvedElement.getChildNodes();                                       
+                    //See if the feedback was approved.
+                    if(approvedElementList.item(0).getNodeValue() == "true"){
+                        numOfFeedbacks++;                        
+                    }
+                }
+            //get the average element for this doctor
+            NodeList averageList = doctorElement.getElementsByTagName("averageRating");
+            //put it into an element
+            Element averageElement = (Element)averageList.item(0);           
+            //get the value/s 
+            NodeList averageElementList = averageElement.getChildNodes();            
+            //convert the value to a number 
+            averageRating = Float.parseFloat(averageElementList.item(0).getNodeValue());
+            //now do the calculation.
+            averageRating = (averageRating + newRating)/numOfFeedbacks;
+            //no need to continue looping through doctors.
+            break;
+            }
+        }
+        return averageRating;
+    }
+    
+    
+    /**
      * Finds the names of all the doctors by looping through the XML file and sends them back to
      * where the method was called as a string array.
      * @return the listOfDoctors array.

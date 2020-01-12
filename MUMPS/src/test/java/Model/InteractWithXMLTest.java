@@ -105,5 +105,18 @@ public class InteractWithXMLTest {
     @Test
     public void testGetAllDoctorRatings() {
     }
+
+    @Test
+    public void testCalculateAverageRating() {
+        //Test this!
+    }
+
+    @Test
+    public void testGetOneDoctorComments() {
+    }
+
+    @Test
+    public void testGetDoctorFeedbackObject() {
+    }
     
 }

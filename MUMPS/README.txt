@@ -25,12 +25,12 @@ Created GUI JFrames for all parts of the program, for all users.
 Made buttons direct the user to the right place.
 Drew UML diagrams.
 Made Javadoc.
+Made some JUnit tests.
 
-Things I didn't finish:
-Password checking.
+Things I started but didn't finish on time:
 Exception handling.
-JUnit tests.
 Writing data to XML.
 Displaying some data on GUI, eg. Table of doctor information.
 Optimising code and making it better in terms of SOLID in some places, eg. PopulateLists class.
 Some functionalities, eg. Prescribe medicine to a patient, etc.
+Password checking.
