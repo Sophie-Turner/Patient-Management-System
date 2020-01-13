@@ -30,7 +30,6 @@ Made methods to read from and write to the XML file.
 <br/><br/>
 Things I started but didn't finish on time:<br/>
 Exception handling.<br/>
-Writing data to XML.<br/>
 Displaying some data on GUI, eg. Table of doctor information.<br/>
 Getting actions from the form to call methods, eg. remove a patient method called by clicking the remove button.<br/>
 Optimising code and making it better in terms of SOLID in some places, eg. PopulateLists class.<br/>
